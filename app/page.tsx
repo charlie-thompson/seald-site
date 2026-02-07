@@ -77,21 +77,42 @@ const steps = [
 
 const screenshots = [
   {
-    src: "/brand/Seald_Logo_Square_300_White (1).png",
-    alt: "Seald encryption dashboard",
-    caption: "Real-time encryption status across your organization",
+    src: "/screens/dashboard.png",
+    alt: "Seald dashboard showing encryption and authorization overview",
+    caption: "Real-time encryption and authorization overview",
   },
   {
-    src: "/brand/Seald_Logo_Square_300_White (1).png",
-    alt: "Access policy configuration",
-    caption: "Granular access policies with time-based controls",
+    src: "/screens/ai-policy-studio.png",
+    alt: "AI Policy Studio screen",
+    caption: "Write access policies in plain English",
   },
   {
-    src: "/brand/Seald_Logo_Square_300_White (1).png",
-    alt: "Audit log viewer",
+    src: "/screens/logs-audit.png",
+    alt: "Audit logs screen",
     caption: "Tamper-evident audit trail for every access event",
   },
+  {
+    src: "/screens/sessions.png",
+    alt: "Sessions and controls screen",
+    caption: "Session control and device posture",
+  },
+  {
+    src: "/screens/admin-keys.png",
+    alt: "Admin and keys management screen",
+    caption: "Key rotation, TTL, and revocation controls",
+  },
+  {
+    src: "/screens/file-data-stats.png",
+    alt: "File and data statistics screen",
+    caption: "Visibility into encrypted assets and sharing patterns",
+  },
+  {
+    src: "/screens/settings.png",
+    alt: "Settings screen",
+    caption: "Organization and policy configuration",
+  },
 ];
+
 
 export default function HomePage() {
   return (
