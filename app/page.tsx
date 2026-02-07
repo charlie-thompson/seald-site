@@ -117,28 +117,33 @@ const screenshots = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden pb-28 pt-20 md:pb-36 md:pt-28">
-        <div className="glow-shape glow-blue -top-32 left-[15%] h-[32rem] w-[32rem]" />
-        <div className="glow-shape glow-cyan -bottom-24 right-[10%] h-[26rem] w-[26rem]" />
-        <Container className="relative">
-          <div className="glass-panel mx-auto max-w-4xl px-6 py-16 text-center md:px-12 md:py-20">
-            <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-navy md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
-              Keep PHI encrypted everywhere while controlling access after
-              it&apos;s shared.
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
-              Seald adds end-to-end encryption and policy-based access control
-              to any healthcare application. Protection that travels with the
-              data, not with the network.
-            </p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
-              <SecondaryButton href="/product">See how it works</SecondaryButton>
-            </div>
-          </div>
-        </Container>
-      </section>
+     {/* Hero */}
+<section className="hero-dark relative overflow-hidden py-20">
+  <div className="hero-orb cyan pointer-events-none" />
+  <div className="hero-orb blue pointer-events-none" />
+  <div className="absolute inset-0 hero-grid pointer-events-none" />
+
+  <Container className="relative z-10">
+    <div className="hero-glass mx-auto max-w-4xl px-6 py-16 text-center md:px-12 md:py-20">
+      <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-navy md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
+        Keep PHI encrypted everywhere while controlling access after it&apos;s shared.
+      </h1>
+
+      <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
+        Seald adds end-to-end encryption and policy-based access control to any healthcare application.
+        Protection that travels with the data, not with the network.
+      </p>
+
+      <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
+        <SecondaryButton href="/product">See how it works</SecondaryButton>
+      </div>
+    </div>
+  </Container>
+</section>
+
+
+
 
       {/* Features */}
       <section className="relative overflow-hidden py-28">
@@ -168,20 +173,20 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="relative overflow-hidden py-28">
+      <section className="section-dark relative overflow-hidden py-16">
         <div className="glow-shape glow-cyan left-[10%] top-1/2 h-[22rem] w-[22rem] -translate-y-1/2" />
         <Container>
-          <SectionHeading title="How it works" centered />
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
+          <div className="[&_h2]:text-white [&_p]:text-white/70"><SectionHeading title="How it works" centered /></div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
             {steps.map((s) => (
-              <GlassCard key={s.step} className="p-8 text-center">
+              <GlassCard key={s.step} className="glass-dark p-8 text-center">
                 <div className="brand-gradient mx-auto flex h-11 w-11 items-center justify-center rounded-full text-base font-bold text-white">
                   {s.step}
                 </div>
-                <h3 className="mt-5 text-[0.95rem] font-semibold text-navy">
+                <h3 className="mt-5 text-[0.95rem] font-semibold text-white">
                   {s.title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
+                <p className="mt-2.5 text-sm leading-relaxed text-white/70">
                   {s.description}
                 </p>
               </GlassCard>
