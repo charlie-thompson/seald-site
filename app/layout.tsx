@@ -29,11 +29,11 @@ function Header() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link href="/" className="flex items-center">
           <Image
-            src="/brand/Seald_Logo_Square_300_White (1).png"
-            alt="Seald logo"
-            width={56}
-            height={56}
-            className="h-11 w-11 rounded-xl md:h-14 md:w-14"
+            src="/brand/seald-shield-icon.png"
+            alt="Seald"
+            width={44}
+            height={44}
+            className="h-10 w-auto"
             priority
           />
         </Link>

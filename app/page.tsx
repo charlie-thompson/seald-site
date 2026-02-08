@@ -1,4 +1,5 @@
 import Container from "@/app/components/Container";
+import HeroGraphic from "@/app/components/HeroGraphic";
 import SectionHeading from "@/app/components/SectionHeading";
 import GlassCard from "@/app/components/GlassCard";
 import { PrimaryButton, SecondaryButton } from "@/app/components/Buttons";
@@ -118,25 +119,46 @@ export default function HomePage() {
   return (
     <>
      {/* Hero */}
-<section className="hero-dark relative overflow-hidden py-20">
-  <div className="hero-orb cyan pointer-events-none" />
-  <div className="hero-orb blue pointer-events-none" />
-  <div className="absolute inset-0 hero-grid pointer-events-none" />
+<section className="relative overflow-hidden bg-[#050d1a] py-24 md:py-32 lg:py-40">
+  {/* Glow orbs */}
+  <div className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-[#22D3EE]/15 blur-[120px] pointer-events-none" />
+  <div className="absolute -top-20 -right-40 h-[600px] w-[600px] rounded-full bg-[#1677FF]/15 blur-[150px] pointer-events-none" />
+  <div className="absolute bottom-0 left-20 h-[300px] w-[300px] rounded-full bg-[#0B5CFF]/10 blur-[100px] pointer-events-none" />
+  {/* Grid overlay */}
+  <div
+    className="absolute inset-0 pointer-events-none opacity-[0.03]"
+    style={{
+      backgroundImage: 'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
+      backgroundSize: '60px 60px',
+    }}
+  />
 
   <Container className="relative z-10">
-    <div className="hero-glass mx-auto max-w-4xl px-6 py-16 text-center md:px-12 md:py-20">
-      <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-navy md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
-        Keep PHI encrypted everywhere while controlling access after it&apos;s shared.
-      </h1>
+    <div className="flex items-center justify-between">
+      <div className="max-w-[720px] px-6 md:px-0">
+        <h1>
+          <span className="block text-[72px] sm:text-[96px] lg:text-[140px] font-bold leading-none bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(22,119,255,0.3)]">
+            Seald
+          </span>
+          <span className="mt-2 block text-[2rem] sm:text-[2.75rem] lg:text-[4rem] font-bold leading-[1.1] tracking-[-0.02em] text-white">
+            Healthcare
+          </span>
+        </h1>
 
-      <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
-        Seald adds end-to-end encryption and policy-based access control to any healthcare application.
-        Protection that travels with the data, not with the network.
-      </p>
+        <p className="mt-6 max-w-[56ch] text-base leading-relaxed text-white/70 md:mt-8 md:text-lg">
+          Keep PHI encrypted everywhere while controlling access after it&apos;s shared.
+        </p>
 
-      <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
-        <SecondaryButton href="/product">See how it works</SecondaryButton>
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
+          <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
+          <span className="[&_.btn-secondary]:border [&_.btn-secondary]:border-white/30 [&_.btn-secondary]:text-white [&_.btn-secondary]:bg-white/5 [&_.btn-secondary]:backdrop-blur-none">
+            <SecondaryButton href="/product">See how it works</SecondaryButton>
+          </span>
+        </div>
+      </div>
+
+      <div className="hidden md:flex items-center justify-center shrink-0">
+        <HeroGraphic />
       </div>
     </div>
   </Container>
@@ -231,17 +253,18 @@ export default function HomePage() {
 
       {/* Final CTA */}
       <section className="relative overflow-hidden py-28">
-        <div className="glow-shape glow-cyan right-[15%] top-0 h-[22rem] w-[22rem]" />
         <Container>
-          <div className="glass-card-strong mx-auto max-w-3xl px-8 py-16 text-center md:px-16">
-            <h2 className="text-2xl font-bold tracking-tight text-navy md:text-3xl">
+          <div className="mx-auto max-w-3xl rounded-3xl bg-gradient-to-r from-[#7C3AED] via-[#EC4899] to-[#8B5CF6] px-8 py-16 text-center shadow-[0_0_60px_rgba(124,58,237,0.3)] md:px-16">
+            <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
               Ready to protect PHI beyond the perimeter?
             </h2>
-            <p className="mt-4 text-text-secondary">
+            <p className="mt-4 text-white/80">
               Start with a 60-to-90-day pilot. No rip-and-replace required.
             </p>
             <div className="mt-8">
-              <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
+              <a href="/contact" className="inline-flex items-center justify-center rounded-xl bg-white px-7 py-3 text-sm font-medium text-[#7C3AED] shadow-md transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+                Book a pilot
+              </a>
             </div>
           </div>
         </Container>

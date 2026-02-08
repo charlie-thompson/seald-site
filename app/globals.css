@@ -8,6 +8,9 @@
   --blue-primary: #1677FF;
   --blue-deep: #0B5CFF;
   --cyan: #22D3EE;
+  --purple: #7C3AED;
+  --pink: #EC4899;
+  --purple-light: #8B5CF6;
   --bg-light: #F6FAFF;
   --border: oklch(0.922 0 0);
   --white: #ffffff;
@@ -51,6 +54,9 @@
   --color-blue-primary: var(--blue-primary);
   --color-blue-deep: var(--blue-deep);
   --color-cyan: var(--cyan);
+  --color-purple: var(--purple);
+  --color-pink: var(--pink);
+  --color-purple-light: var(--purple-light);
   --color-bg-light: var(--bg-light);
   --color-border: var(--border);
   --color-text-secondary: var(--text-secondary);
@@ -454,6 +460,42 @@ body {
 }
 
 
+
+
+/* ------------------------------------------------
+   Hero graphic animations
+   ------------------------------------------------ */
+
+@keyframes hero-orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes hero-shield-breathe {
+  0%   { transform: scale(1);    filter: drop-shadow(0 0 12px rgba(22,119,255,0.25)); }
+  100% { transform: scale(1.03); filter: drop-shadow(0 0 20px rgba(34,211,238,0.35)); }
+}
+
+@keyframes hero-node-blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+
+.hero-ring-1 { animation: hero-orbit 20s linear infinite; }
+.hero-ring-2 { animation: hero-orbit 30s linear infinite reverse; }
+.hero-ring-3 { animation: hero-orbit 25s linear infinite; }
+
+.hero-shield-pulse {
+  animation: hero-shield-breathe 3s ease-in-out infinite alternate;
+}
+
+.hero-node-pulse {
+  animation: hero-node-blink 3s ease-in-out infinite;
+}
+
+.hero-node-pulse-delayed {
+  animation: hero-node-blink 3s ease-in-out infinite 1.5s;
+}
 
 @layer base {
   * {
