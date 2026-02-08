@@ -94,33 +94,39 @@ export default function HowPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#050d1a] py-16 md:py-24">
-        <div className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-[#22D3EE]/15 blur-[120px] pointer-events-none" />
-        <div className="absolute -top-20 -right-40 h-[600px] w-[600px] rounded-full bg-[#1677FF]/15 blur-[150px] pointer-events-none" />
-        <Container className="relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-              How Seald Healthcare Works
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
-              Encryption and access control that travel with the data, even
-              after it leaves your environment.
-            </p>
-          </div>
-          <div className="mt-12">
+      <section className="relative overflow-hidden bg-[#050d1a]">
+        <Container>
+          <div className="relative pt-8 md:pt-12">
             <Image
               src="/images/seald-how-it-works.webp"
               alt="How Seald Healthcare works - data flows from source through encryption to authorized access"
               width={4096}
               height={2731}
-              className="w-full h-auto rounded-2xl"
+              className="w-full h-auto"
             />
+            <div className="absolute top-0 left-0 bottom-0 w-[10%] bg-gradient-to-r from-[#050d1a] to-transparent pointer-events-none z-10" />
+            <div className="absolute top-0 right-0 bottom-0 w-[10%] bg-gradient-to-l from-[#050d1a] to-transparent pointer-events-none z-10" />
+            <div className="absolute top-0 left-0 right-0 h-[8%] bg-gradient-to-b from-[#050d1a] to-transparent pointer-events-none z-10" />
+            <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-b from-transparent via-[#050d1a]/60 to-[#050d1a] pointer-events-none z-10" />
+          </div>
+        </Container>
+        <div className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-[#22D3EE]/15 blur-[120px] pointer-events-none" />
+        <div className="absolute -top-20 -right-40 h-[600px] w-[600px] rounded-full bg-[#1677FF]/15 blur-[150px] pointer-events-none" />
+        <Container className="relative z-10 pt-10 pb-12 md:pt-12 md:pb-16">
+          <div className="max-w-3xl">
+            <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+              Encryption and access control built for healthcare
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
+              Seald protects PHI at the data layer so it stays encrypted across
+              every system, vendor, and workflow it touches.
+            </p>
           </div>
         </Container>
       </section>
 
       {/* Threat model */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-4">
         <div className="glow-shape glow-blue right-[5%] top-[15%] h-[24rem] w-[24rem]" />
         <Container>
           <SectionHeading
@@ -141,7 +147,7 @@ export default function HowPage() {
       </section>
 
       {/* Key control */}
-      <section className="relative overflow-hidden py-16 md:py-20">
+      <section className="relative overflow-hidden py-4">
         <div className="glow-shape glow-cyan left-[5%] top-0 h-[22rem] w-[22rem]" />
         <Container className="max-w-4xl">
           <GlassCard hover={false} className="p-8 md:p-12">
@@ -169,7 +175,7 @@ export default function HowPage() {
       </section>
 
       {/* Audit */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-4">
         <div className="glow-shape glow-blue right-[15%] top-0 h-[20rem] w-[20rem]" />
         <Container className="max-w-4xl">
           <GlassCard hover={false} className="p-8 md:p-12">
@@ -190,65 +196,65 @@ export default function HowPage() {
       </section>
 
       {/* Complements perimeter */}
-      <section className="relative overflow-hidden py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#050d1a] py-4">
         <div className="glow-shape glow-cyan left-[15%] bottom-0 h-[22rem] w-[22rem]" />
         <Container className="max-w-4xl">
-          <SectionHeading title="How Seald complements perimeter security" />
-          <div className="glass-frame mt-10">
+          <div className="[&_h2]:text-white [&_p]:text-white/70"><SectionHeading title="How Seald complements perimeter security" /></div>
+          <div className="glass-frame mt-10 !border-white/10 !bg-white/5">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-border/60">
-                  <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-text-muted">
+                <tr className="border-b border-white/10">
+                  <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-white/50">
                     Layer
                   </th>
-                  <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-text-muted">
+                  <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-white/50">
                     Protects against
                   </th>
-                  <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-text-muted">
+                  <th className="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-white/50">
                     Limitation
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-border/40">
+              <tbody className="divide-y divide-white/10">
                 <tr>
-                  <td className="px-6 py-4 font-medium text-navy">
+                  <td className="px-6 py-4 font-medium text-white">
                     Firewalls / VPN
                   </td>
-                  <td className="px-6 py-4 text-text-secondary">
+                  <td className="px-6 py-4 text-white/70">
                     Unauthorized network access
                   </td>
-                  <td className="px-6 py-4 text-text-secondary">
+                  <td className="px-6 py-4 text-white/70">
                     No protection after data leaves the network
                   </td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 font-medium text-navy">TLS</td>
-                  <td className="px-6 py-4 text-text-secondary">
+                  <td className="px-6 py-4 font-medium text-white">TLS</td>
+                  <td className="px-6 py-4 text-white/70">
                     Eavesdropping in transit
                   </td>
-                  <td className="px-6 py-4 text-text-secondary">
+                  <td className="px-6 py-4 text-white/70">
                     Data is plaintext at both endpoints
                   </td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 font-medium text-navy">
+                  <td className="px-6 py-4 font-medium text-white">
                     At-rest encryption
                   </td>
-                  <td className="px-6 py-4 text-text-secondary">
+                  <td className="px-6 py-4 text-white/70">
                     Physical disk theft
                   </td>
-                  <td className="px-6 py-4 text-text-secondary">
+                  <td className="px-6 py-4 text-white/70">
                     Admins and apps access data in plaintext
                   </td>
                 </tr>
-                <tr className="bg-cyan/[0.04]">
-                  <td className="px-6 py-4 font-medium text-navy">
+                <tr className="bg-cyan/[0.08]">
+                  <td className="px-6 py-4 font-medium text-white">
                     Seald (E2EE)
                   </td>
-                  <td className="px-6 py-4 text-text-secondary">
+                  <td className="px-6 py-4 text-white/70">
                     Breaches, insider threats, unauthorized sharing
                   </td>
-                  <td className="px-6 py-4 text-text-secondary">
+                  <td className="px-6 py-4 text-white/70">
                     Requires SDK integration
                   </td>
                 </tr>
@@ -259,7 +265,7 @@ export default function HowPage() {
       </section>
 
       {/* Ecosystem */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-4">
         <div className="glow-shape glow-blue left-[10%] top-0 h-[22rem] w-[22rem]" />
         <Container className="max-w-4xl">
           <GlassCard hover={false} className="p-8 md:p-12">
@@ -280,7 +286,7 @@ export default function HowPage() {
       </section>
 
       {/* FAQ */}
-      <section className="relative overflow-hidden py-16 md:py-20">
+      <section className="relative overflow-hidden py-4">
         <div className="glow-shape glow-cyan right-[10%] top-[20%] h-[22rem] w-[22rem]" />
         <Container className="max-w-3xl">
           <SectionHeading title="Frequently asked questions" />
@@ -314,19 +320,19 @@ export default function HowPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-4">
         <div className="glow-shape glow-blue left-[20%] top-0 h-[20rem] w-[20rem]" />
         <Container>
-          <div className="glass-card-strong mx-auto max-w-3xl px-8 py-16 text-center md:px-16">
-            <h2 className="text-2xl font-bold tracking-tight text-navy md:text-3xl">
+          <div className="mx-auto max-w-3xl rounded-3xl bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] px-8 py-16 text-center shadow-lg md:px-16">
+            <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
               See Seald in your environment
             </h2>
-            <p className="mt-4 text-text-secondary">
+            <p className="mt-4 text-white/80">
               Start with a focused pilot to validate encryption and access
               control across your workflows.
             </p>
             <div className="mt-8">
-              <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
+              <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-semibold text-[#0B5CFF] transition hover:bg-white/90">Book a pilot</a>
             </div>
           </div>
         </Container>

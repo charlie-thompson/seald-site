@@ -71,7 +71,7 @@ export default function PilotPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden pb-16 pt-20 md:pt-24">
+      <section className="relative overflow-hidden pb-8 pt-16 md:pt-20">
         <div className="glow-shape glow-blue -top-20 left-[15%] h-[30rem] w-[30rem]" />
         <Container>
           <div className="max-w-3xl">
@@ -91,7 +91,7 @@ export default function PilotPage() {
       </section>
 
       {/* Timeline */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-4">
         <div className="glow-shape glow-cyan right-[5%] top-[20%] h-[24rem] w-[24rem]" />
         <Container className="max-w-4xl">
           <SectionHeading title="Pilot timeline" />
@@ -122,7 +122,7 @@ export default function PilotPage() {
       </section>
 
       {/* What's included */}
-      <section className="relative overflow-hidden py-16 md:py-20">
+      <section className="relative overflow-hidden py-4">
         <div className="glow-shape glow-blue left-[10%] top-0 h-[22rem] w-[22rem]" />
         <Container className="max-w-4xl">
           <GlassCard hover={false} className="p-8 md:p-12">
@@ -143,7 +143,7 @@ export default function PilotPage() {
       </section>
 
       {/* Success criteria */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-4">
         <div className="glow-shape glow-cyan right-[15%] bottom-0 h-[22rem] w-[22rem]" />
         <Container className="max-w-4xl">
           <GlassCard hover={false} className="p-8 md:p-12">
@@ -167,18 +167,18 @@ export default function PilotPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-4">
         <div className="glow-shape glow-blue left-[20%] top-0 h-[20rem] w-[20rem]" />
         <Container>
-          <div className="glass-card-strong mx-auto max-w-3xl px-8 py-16 text-center md:px-16">
-            <h2 className="text-2xl font-bold tracking-tight text-navy md:text-3xl">
+          <div className="mx-auto max-w-3xl rounded-3xl bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] px-8 py-16 text-center shadow-lg md:px-16">
+            <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
               Start your pilot
             </h2>
-            <p className="mt-4 text-text-secondary">
+            <p className="mt-4 text-white/80">
               Tell us about your use case and we will scope a pilot that fits.
             </p>
             <div className="mt-8">
-              <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
+              <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-semibold text-[#0B5CFF] transition hover:bg-white/90">Book a pilot</a>
             </div>
           </div>
         </Container>

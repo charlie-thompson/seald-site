@@ -221,16 +221,16 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
         <div className="glow-shape glow-cyan right-[20%] top-0 h-[20rem] w-[20rem]" />
         <Container>
-          <div className="glass-card-strong mx-auto max-w-3xl px-8 py-16 text-center md:px-16">
-            <h2 className="text-2xl font-bold tracking-tight text-navy md:text-3xl">
+          <div className="mx-auto max-w-3xl rounded-3xl bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] px-8 py-16 text-center shadow-lg md:px-16">
+            <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
               Want to learn more?
             </h2>
-            <p className="mt-4 text-text-secondary">
+            <p className="mt-4 text-white/80">
               We would be happy to walk you through our approach and answer your
               questions.
             </p>
             <div className="mt-8">
-              <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
+              <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-semibold text-[#0B5CFF] transition hover:bg-white/90">Book a pilot</a>
             </div>
           </div>
         </Container>

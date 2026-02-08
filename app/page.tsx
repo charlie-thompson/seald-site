@@ -298,17 +298,17 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative overflow-hidden py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
         <Container>
-          <div className="mx-auto max-w-3xl rounded-3xl bg-gradient-to-r from-[#7C3AED] via-[#EC4899] to-[#8B5CF6] px-8 py-16 text-center shadow-[0_0_60px_rgba(124,58,237,0.3)] md:px-16">
+          <div className="mx-auto max-w-3xl rounded-3xl bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] px-8 py-16 text-center shadow-lg md:px-16">
             <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
               Ready to protect PHI beyond the perimeter?
             </h2>
             <p className="mt-4 text-white/80">
               Start with a 60-to-90-day pilot. No rip-and-replace required.
             </p>
-            <div className="mt-8 [&_a]:bg-white [&_a]:text-[#7C3AED] [&_a]:shadow-md [&_a]:bg-none">
-              <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
+            <div className="mt-8">
+              <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-semibold text-[#0B5CFF] transition hover:bg-white/90">Book a pilot</a>
             </div>
           </div>
         </Container>
