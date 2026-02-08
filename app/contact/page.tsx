@@ -14,7 +14,7 @@ const inputClass =
 export default function ContactPage() {
   return (
     <>
-      <section className="relative overflow-hidden pb-28 pt-20 md:pt-28">
+      <section className="relative overflow-hidden pb-16 pt-20 md:pt-24">
         <div className="glow-shape glow-blue -top-20 left-[20%] h-[28rem] w-[28rem]" />
         <div className="glow-shape glow-cyan right-[5%] bottom-0 h-[20rem] w-[20rem]" />
         <Container className="relative max-w-2xl">

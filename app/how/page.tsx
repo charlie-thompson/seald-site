@@ -93,7 +93,7 @@ export default function HowPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden pb-28 pt-20 md:pt-28">
+      <section className="relative overflow-hidden pb-16 pt-20 md:pt-24">
         <div className="glow-shape glow-blue -top-20 right-[15%] h-[30rem] w-[30rem]" />
         <Container>
           <div className="max-w-3xl">
@@ -109,7 +109,7 @@ export default function HowPage() {
       </section>
 
       {/* Threat model */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
         <div className="glow-shape glow-blue right-[5%] top-[15%] h-[24rem] w-[24rem]" />
         <Container>
           <SectionHeading
@@ -130,7 +130,7 @@ export default function HowPage() {
       </section>
 
       {/* Key control */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-28">
+      <section className="relative overflow-hidden py-16 md:py-20">
         <div className="glow-shape glow-cyan left-[5%] top-0 h-[22rem] w-[22rem]" />
         <Container className="max-w-4xl">
           <GlassCard hover={false} className="p-8 md:p-12">
@@ -158,7 +158,7 @@ export default function HowPage() {
       </section>
 
       {/* Audit */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
         <div className="glow-shape glow-blue right-[15%] top-0 h-[20rem] w-[20rem]" />
         <Container className="max-w-4xl">
           <GlassCard hover={false} className="p-8 md:p-12">
@@ -179,7 +179,7 @@ export default function HowPage() {
       </section>
 
       {/* Complements perimeter */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-28">
+      <section className="relative overflow-hidden py-16 md:py-20">
         <div className="glow-shape glow-cyan left-[15%] bottom-0 h-[22rem] w-[22rem]" />
         <Container className="max-w-4xl">
           <SectionHeading title="How Seald complements perimeter security" />
@@ -248,7 +248,7 @@ export default function HowPage() {
       </section>
 
       {/* Ecosystem */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
         <div className="glow-shape glow-blue left-[10%] top-0 h-[22rem] w-[22rem]" />
         <Container className="max-w-4xl">
           <GlassCard hover={false} className="p-8 md:p-12">
@@ -269,7 +269,7 @@ export default function HowPage() {
       </section>
 
       {/* FAQ */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-28">
+      <section className="relative overflow-hidden py-16 md:py-20">
         <div className="glow-shape glow-cyan right-[10%] top-[20%] h-[22rem] w-[22rem]" />
         <Container className="max-w-3xl">
           <SectionHeading title="Frequently asked questions" />
@@ -303,7 +303,7 @@ export default function HowPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
         <div className="glow-shape glow-blue left-[20%] top-0 h-[20rem] w-[20rem]" />
         <Container>
           <div className="glass-card-strong mx-auto max-w-3xl px-8 py-16 text-center md:px-16">

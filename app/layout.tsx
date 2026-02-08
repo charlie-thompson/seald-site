@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import MobileMenu from "@/app/components/MobileMenu";
 import "./globals.css";
 
 const inter = Inter({
@@ -16,8 +17,7 @@ export const metadata: Metadata = {
 };
 
 const navLinks = [
-  { href: "/product", label: "Product" },
-  { href: "/security", label: "Security" },
+  { href: "/how", label: "How It Works" },
   { href: "/pilot", label: "Pilot" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -59,47 +59,6 @@ function Header() {
   );
 }
 
-function MobileMenu() {
-  return (
-    <details className="relative md:hidden">
-      <summary className="cursor-pointer list-none p-2 text-text-secondary">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
-        </svg>
-      </summary>
-      <div className="glass-panel absolute right-0 top-full mt-2 w-52 p-5">
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="block py-2 text-sm text-text-secondary hover:text-navy"
-          >
-            {link.label}
-          </Link>
-        ))}
-        <Link
-          href="/contact"
-          className="btn-primary mt-3 w-full !text-[0.8125rem]"
-        >
-          Book a pilot
-        </Link>
-      </div>
-    </details>
-  );
-}
-
 function Footer() {
   return (
     <footer className="section-dark border-t border-white/15">
@@ -123,20 +82,14 @@ function Footer() {
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-text-muted">
-              Product
+              Platform
             </p>
             <div className="mt-4 flex flex-col gap-2.5">
               <Link
-                href="/product"
+                href="/how"
                 className="text-sm text-text-secondary transition-colors duration-200 hover:text-blue-primary"
               >
-                Overview
-              </Link>
-              <Link
-                href="/security"
-                className="text-sm text-text-secondary transition-colors duration-200 hover:text-blue-primary"
-              >
-                Security
+                How It Works
               </Link>
               <Link
                 href="/pilot"

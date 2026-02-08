@@ -168,7 +168,7 @@ export default function HomePage() {
 
 
       {/* Features */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
         <div className="glow-shape glow-blue right-[5%] top-0 h-[24rem] w-[24rem]" />
         <Container>
           <SectionHeading
@@ -195,7 +195,7 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="section-dark relative overflow-hidden py-16">
+      <section className="section-dark relative overflow-hidden py-16 md:py-20">
         <div className="glow-shape glow-cyan left-[10%] top-1/2 h-[22rem] w-[22rem] -translate-y-1/2" />
         <Container>
           <div className="[&_h2]:text-white [&_p]:text-white/70"><SectionHeading title="How it works" centered /></div>
@@ -218,7 +218,7 @@ export default function HomePage() {
       </section>
 
       {/* Product proof / screenshots */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden py-16 md:py-20">
         <div className="glow-shape glow-blue left-[20%] top-0 h-[28rem] w-[28rem]" />
         <Container>
           <SectionHeading
@@ -251,8 +251,54 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* Core Capabilities */}
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
+        <div className="glow-shape glow-cyan right-[5%] top-[10%] h-[24rem] w-[24rem]" />
+        <Container>
+          <SectionHeading title="Core Capabilities" centered />
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <GlassCard className="p-7">
+              <h3 className="text-[0.95rem] font-semibold text-navy">End-to-end encryption</h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
+                PHI is encrypted on the sender&apos;s device and only decrypted by authorized recipients. No intermediary, including Seald, can access plaintext data.
+              </p>
+            </GlassCard>
+            <GlassCard className="p-7">
+              <h3 className="text-[0.95rem] font-semibold text-navy">Persistent access policies</h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
+                Define who can access data, from which devices, during which time windows, and revoke access at any time, even after data has been shared.
+              </p>
+            </GlassCard>
+            <GlassCard className="p-7">
+              <h3 className="text-[0.95rem] font-semibold text-navy">Tamper-evident audit logs</h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
+                Every access, denial, and policy change is logged with cryptographic integrity. Logs cannot be altered without detection.
+              </p>
+            </GlassCard>
+            <GlassCard className="p-7">
+              <h3 className="text-[0.95rem] font-semibold text-navy">SDK-first integration</h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
+                Integrate encryption into your existing applications with a few lines of code. No UI changes or database re-architecture required.
+              </p>
+            </GlassCard>
+            <GlassCard className="p-7">
+              <h3 className="text-[0.95rem] font-semibold text-navy">Automatic key management</h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
+                Keys are issued, rotated, rewrapped, and revoked automatically. No cryptography expertise required from your team.
+              </p>
+            </GlassCard>
+            <GlassCard className="p-7">
+              <h3 className="text-[0.95rem] font-semibold text-navy">Group and role-based access</h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
+                Assign encryption permissions to teams, departments, or roles. Access updates propagate automatically when group membership changes.
+              </p>
+            </GlassCard>
+          </div>
+        </Container>
+      </section>
+
       {/* Final CTA */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden py-16 md:py-20">
         <Container>
           <div className="mx-auto max-w-3xl rounded-3xl bg-gradient-to-r from-[#7C3AED] via-[#EC4899] to-[#8B5CF6] px-8 py-16 text-center shadow-[0_0_60px_rgba(124,58,237,0.3)] md:px-16">
             <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
@@ -261,10 +307,8 @@ export default function HomePage() {
             <p className="mt-4 text-white/80">
               Start with a 60-to-90-day pilot. No rip-and-replace required.
             </p>
-            <div className="mt-8">
-              <a href="/contact" className="inline-flex items-center justify-center rounded-xl bg-white px-7 py-3 text-sm font-medium text-[#7C3AED] shadow-md transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg">
-                Book a pilot
-              </a>
+            <div className="mt-8 [&_a]:bg-white [&_a]:text-[#7C3AED] [&_a]:shadow-md [&_a]:bg-none">
+              <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
             </div>
           </div>
         </Container>

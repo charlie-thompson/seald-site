@@ -70,7 +70,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden pb-28 pt-20 md:pt-28">
+      <section className="relative overflow-hidden pb-16 pt-20 md:pt-24">
         <div className="glow-shape glow-cyan -top-20 right-[20%] h-[30rem] w-[30rem]" />
         <Container>
           <div className="max-w-3xl">
@@ -82,13 +82,13 @@ export default function AboutPage() {
       </section>
 
       {/* Our Team */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
         <div className="glow-shape glow-blue right-[10%] top-0 h-[24rem] w-[24rem]" />
         <Container>
           <SectionHeading title="Our Team" centered />
 
           {/* Leadership row */}
-          <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {leadership.map((person) => (
               <div key={person.name} className="flex flex-col items-center text-center">
                 <Image
@@ -115,7 +115,7 @@ export default function AboutPage() {
           </div>
 
           {/* Advisors row */}
-          <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-2 lg:mx-auto lg:max-w-3xl">
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-2 lg:mx-auto lg:max-w-3xl">
             {advisors.map((person) => (
               <div key={person.name} className="flex flex-col items-center text-center">
                 <Image
@@ -144,7 +144,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission / Why / Approach */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden py-16 md:py-20">
         <div className="glow-shape glow-blue left-[10%] top-0 h-[22rem] w-[22rem]" />
         <div className="glow-shape glow-cyan right-[5%] top-[40%] h-[22rem] w-[22rem]" />
         <Container className="max-w-3xl">
@@ -218,7 +218,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
         <div className="glow-shape glow-cyan right-[20%] top-0 h-[20rem] w-[20rem]" />
         <Container>
           <div className="glass-card-strong mx-auto max-w-3xl px-8 py-16 text-center md:px-16">
