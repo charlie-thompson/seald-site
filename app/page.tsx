@@ -145,8 +145,8 @@ export default function HomePage() {
           </span>
         </h1>
 
-        <p className="mt-6 max-w-[56ch] text-base leading-relaxed text-white/70 md:mt-8 md:text-lg">
-          Keep PHI encrypted everywhere while controlling access after it&apos;s shared.
+        <p className="mt-6 max-w-[60ch] text-xl leading-relaxed text-white/70 md:mt-8 md:text-2xl lg:text-3xl">
+          Securing the world&apos;s health data without disrupting your existing infrastructure.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
