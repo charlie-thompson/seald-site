@@ -19,10 +19,7 @@ export default function ContactPage() {
           <h1 className="text-3xl font-bold tracking-tight text-navy md:text-4xl">
             Get in touch
           </h1>
-          <p className="mt-4 text-lg text-text-secondary">
-            Tell us about your use case and we will follow up within one
-            business day.
-          </p>
+        
 
           <GlassCard hover={false} className="mt-12 p-8">
             <HubSpotForm />

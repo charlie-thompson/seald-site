@@ -94,32 +94,14 @@ export default function HowPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#050d1a]">
+      <section className="relative overflow-hidden pb-16 pt-20 md:pt-24">
         <Container>
-          <div className="relative pt-8 md:pt-12">
-            <Image
-              src="/images/seald-how-it-works.webp"
-              alt="How Seald Healthcare works - data flows from source through encryption to authorized access"
-              width={4096}
-              height={2731}
-              className="w-full h-auto"
-            />
-            <div className="absolute top-0 left-0 bottom-0 w-[10%] bg-gradient-to-r from-[#050d1a] to-transparent pointer-events-none z-10" />
-            <div className="absolute top-0 right-0 bottom-0 w-[10%] bg-gradient-to-l from-[#050d1a] to-transparent pointer-events-none z-10" />
-            <div className="absolute top-0 left-0 right-0 h-[8%] bg-gradient-to-b from-[#050d1a] to-transparent pointer-events-none z-10" />
-            <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-b from-transparent via-[#050d1a]/60 to-[#050d1a] pointer-events-none z-10" />
-          </div>
-        </Container>
-        <div className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-[#22D3EE]/15 blur-[120px] pointer-events-none" />
-        <div className="absolute -top-20 -right-40 h-[600px] w-[600px] rounded-full bg-[#1677FF]/15 blur-[150px] pointer-events-none" />
-        <Container className="relative z-10 pt-10 pb-12 md:pt-12 md:pb-16">
           <div className="max-w-3xl">
-            <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-              Encryption and access control built for healthcare
+            <h1 className="text-3xl font-bold tracking-tight text-navy md:text-4xl lg:text-5xl">
+              How Seald Healthcare Works
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
-              Seald protects PHI at the data layer so it stays encrypted across
-              every system, vendor, and workflow it touches.
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
+              Encryption and access control that travel with the data, even after it leaves your environment.
             </p>
           </div>
         </Container>

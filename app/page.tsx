@@ -119,19 +119,11 @@ export default function HomePage() {
   return (
     <>
      {/* Hero */}
-<section className="relative overflow-hidden bg-[#050d1a] py-24 md:py-32 lg:py-40">
+<section className="relative overflow-hidden bg-white py-24 md:py-32 lg:py-40">
   {/* Glow orbs */}
   <div className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-[#22D3EE]/15 blur-[120px] pointer-events-none" />
   <div className="absolute -top-20 -right-40 h-[600px] w-[600px] rounded-full bg-[#1677FF]/15 blur-[150px] pointer-events-none" />
   <div className="absolute bottom-0 left-20 h-[300px] w-[300px] rounded-full bg-[#0B5CFF]/10 blur-[100px] pointer-events-none" />
-  {/* Grid overlay */}
-  <div
-    className="absolute inset-0 pointer-events-none opacity-[0.03]"
-    style={{
-      backgroundImage: 'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
-      backgroundSize: '60px 60px',
-    }}
-  />
 
   <Container className="relative z-10">
     <div className="flex items-center justify-between">
@@ -140,20 +132,18 @@ export default function HomePage() {
           <span className="block text-[72px] sm:text-[96px] lg:text-[140px] font-bold leading-none bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(22,119,255,0.3)]">
             Seald
           </span>
-          <span className="mt-2 block text-[2rem] sm:text-[2.75rem] lg:text-[4rem] font-bold leading-[1.1] tracking-[-0.02em] text-white">
+          <span className="mt-2 block text-[2rem] sm:text-[2.75rem] lg:text-[4rem] font-bold leading-[1.1] tracking-[-0.02em] text-navy">
             Healthcare
           </span>
         </h1>
 
-        <p className="mt-6 max-w-[60ch] text-xl leading-relaxed text-white/70 md:mt-8 md:text-2xl lg:text-3xl">
+        <p className="mt-6 max-w-[60ch] text-xl leading-relaxed text-text-secondary md:mt-8 md:text-2xl lg:text-3xl">
           Securing the world&apos;s health data without disrupting your existing infrastructure.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
           <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
-          <span className="[&_.btn-secondary]:border [&_.btn-secondary]:border-white/30 [&_.btn-secondary]:text-white [&_.btn-secondary]:bg-white/5 [&_.btn-secondary]:backdrop-blur-none">
-            <SecondaryButton href="/product">See how it works</SecondaryButton>
-          </span>
+          <SecondaryButton href="/how">See how it works</SecondaryButton>
         </div>
       </div>
 
@@ -168,24 +158,26 @@ export default function HomePage() {
 
 
       {/* Features */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#050d1a] py-16 md:py-20">
         <div className="glow-shape glow-blue right-[5%] top-0 h-[24rem] w-[24rem]" />
         <Container>
-          <SectionHeading
-            title="Data protection that goes beyond the perimeter"
-            subtitle="Seald protects PHI after it leaves your systems. Encryption and access policies follow the data across every recipient, device, and workflow."
-            centered
-          />
+          <div className="[&_h2]:text-white [&_p]:text-white/70">
+            <SectionHeading
+              title="Data protection that goes beyond the perimeter"
+              subtitle="Seald protects PHI after it leaves your systems. Encryption and access policies follow the data across every recipient, device, and workflow."
+              centered
+            />
+          </div>
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f) => (
-              <GlassCard key={f.title} className="p-7">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-deep/10 text-blue-primary">
+              <GlassCard key={f.title} className="p-7 !bg-white/10 !border-white/10">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-cyan">
                   {f.icon}
                 </div>
-                <h3 className="mt-5 text-[0.95rem] font-semibold text-navy">
+                <h3 className="mt-5 text-[0.95rem] font-semibold text-white">
                   {f.title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
+                <p className="mt-2.5 text-sm leading-relaxed text-white/70">
                   {f.description}
                 </p>
               </GlassCard>
@@ -195,7 +187,7 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="section-dark relative overflow-hidden py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#050d1a] py-16 md:py-20">
         <div className="glow-shape glow-cyan left-[10%] top-1/2 h-[22rem] w-[22rem] -translate-y-1/2" />
         <Container>
           <div className="[&_h2]:text-white [&_p]:text-white/70"><SectionHeading title="How it works" centered /></div>

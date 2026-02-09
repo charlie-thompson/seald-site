@@ -1,8 +1,8 @@
+import Image from "next/image";
+
 export default function HeroGraphic() {
   return (
-    <div className="relative h-[420px] w-[420px] lg:h-[480px] lg:w-[480px]">
-      {/* Ambient glow behind everything */}
-      <div className="absolute inset-[15%] rounded-full bg-[#1677FF]/10 blur-[60px]" />
+    <div className="relative h-[500px] w-[500px] lg:h-[600px] lg:w-[600px]">
 
       <svg
         viewBox="0 0 400 400"
@@ -99,21 +99,20 @@ export default function HeroGraphic() {
           <circle cx="25" cy="200" r="3" fill="#22D3EE" filter="url(#node-glow)" className="hero-node-pulse-delayed" />
         </g>
 
-        {/* ---- Central shield ---- */}
-        <g className="hero-shield-pulse" style={{ transformOrigin: '200px 200px' }}>
-          <path
-            d="M200 140 L240 158 L240 200 C240 228 220 250 200 260 C180 250 160 228 160 200 L160 158 Z"
-            fill="url(#shield-grad)"
-            fillOpacity="0.15"
-            stroke="url(#shield-grad)"
-            strokeWidth="1.5"
-            filter="url(#shield-glow)"
-          />
-          {/* Keyhole */}
-          <circle cx="200" cy="192" r="6" fill="none" stroke="url(#shield-grad)" strokeWidth="1.5" />
-          <rect x="198" y="197" width="4" height="10" rx="1.5" fill="url(#shield-grad)" opacity="0.8" />
-        </g>
       </svg>
+
+      {/* ---- Central shield image ---- */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="hero-shield-pulse">
+          <Image
+            src="/brand/seald-shield-icon.png"
+            alt="Seald shield"
+            width={200}
+            height={200}
+            className="h-[180px] w-[180px] lg:h-[200px] lg:w-[200px] drop-shadow-[0_0_20px_rgba(22,119,255,0.4)]"
+          />
+        </div>
+      </div>
     </div>
   );
 }
