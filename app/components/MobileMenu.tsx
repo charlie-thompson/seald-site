@@ -3,9 +3,6 @@
 import Link from "next/link";
 
 const navLinks = [
-  { href: "/how", label: "How It Works" },
-  { href: "/pilot", label: "Pilot" },
-  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -48,7 +45,7 @@ export default function MobileMenu() {
           href="/contact"
           className="btn-primary mt-3 w-full !text-[0.8125rem]"
         >
-          Book a pilot
+          Book a Demo
         </Link>
       </div>
     </details>

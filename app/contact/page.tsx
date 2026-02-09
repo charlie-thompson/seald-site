@@ -6,7 +6,7 @@ import HubSpotForm from "./HubSpotForm";
 export const metadata: Metadata = {
   title: "Contact | Seald Healthcare",
   description:
-    "Get in touch with Seald Healthcare. Book a pilot, ask a question, or schedule a technical deep-dive.",
+    "Get in touch with Seald Healthcare. Book a Demo, ask a question, or schedule a technical deep-dive.",
 };
 
 export default function ContactPage() {

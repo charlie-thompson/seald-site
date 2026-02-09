@@ -84,7 +84,7 @@ export default function PilotPage() {
               commitment. No rip-and-replace.
             </p>
             <div className="mt-8">
-              <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
+              <PrimaryButton href="/contact">Book a Demo</PrimaryButton>
             </div>
           </div>
         </Container>
@@ -178,7 +178,7 @@ export default function PilotPage() {
               Tell us about your use case and we will scope a pilot that fits.
             </p>
             <div className="mt-8">
-              <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-semibold text-[#0B5CFF] transition hover:bg-white/90">Book a pilot</a>
+              <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-semibold text-[#0B5CFF] transition hover:bg-white/90">Book a Demo</a>
             </div>
           </div>
         </Container>

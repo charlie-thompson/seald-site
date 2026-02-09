@@ -17,25 +17,26 @@ export const metadata: Metadata = {
 };
 
 const navLinks = [
-  { href: "/how", label: "How It Works" },
-  { href: "/pilot", label: "Pilot" },
-  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
 function Header() {
   return (
-    <header className="glass-nav sticky top-0 z-50">
+    <header className="sticky top-0 z-50 bg-white">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/brand/seald-shield-icon.png"
             alt="Seald"
-            width={44}
-            height={44}
-            className="h-10 w-auto"
+            width={52}
+            height={52}
+            className="h-[52px] w-auto"
             priority
           />
+          <div className="flex flex-col">
+            <span className="text-xl font-bold text-navy">Seald</span>
+            <span className="text-sm font-semibold text-[#1677FF]">Healthcare</span>
+          </div>
         </Link>
 
         <div className="hidden items-center gap-7 md:flex">
@@ -43,13 +44,13 @@ function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[0.8125rem] text-text-secondary transition-colors duration-200 hover:text-navy"
+              className="text-lg text-navy transition-colors duration-200 hover:text-blue-primary"
             >
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" className="btn-primary !px-5 !py-2 !text-[0.8125rem]">
-            Book a pilot
+          <Link href="/contact" className="btn-primary !px-8 !py-3 !text-lg">
+            Book a Demo
           </Link>
         </div>
 
@@ -63,64 +64,36 @@ function Footer() {
   return (
     <footer className="section-dark border-t border-white/15">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid gap-10 md:grid-cols-4">
-          <div className="md:col-span-2">
+        <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
+          <div>
             <div className="flex items-center gap-2.5">
               <Image
-                src="/brand/Seald_Logo_Square_300_White (1).png"
+                src="/brand/seald-shield-icon.png"
                 alt="Seald logo"
-                width={28}
-                height={28}
+                width={48}
+                height={48}
                 className="rounded-lg"
               />
               <span className="font-semibold text-white">Seald Healthcare</span>
             </div>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-text-muted">
-              End-to-end encryption and policy-based access control for
-              protected health information.
+              Protecting patient safety with security.
             </p>
           </div>
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-text-muted">
-              Platform
-            </p>
-            <div className="mt-4 flex flex-col gap-2.5">
-              <Link
-                href="/how"
-                className="text-sm text-text-secondary transition-colors duration-200 hover:text-blue-primary"
-              >
-                How It Works
-              </Link>
-              <Link
-                href="/pilot"
-                className="text-sm text-text-secondary transition-colors duration-200 hover:text-blue-primary"
-              >
-                Pilot program
-              </Link>
-            </div>
-          </div>
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-text-muted">
-              Company
-            </p>
-            <div className="mt-4 flex flex-col gap-2.5">
-              <Link
-                href="/about"
-                className="text-sm text-text-secondary transition-colors duration-200 hover:text-blue-primary"
-              >
-                About
-              </Link>
-              <Link
-                href="/contact"
-                className="text-sm text-text-secondary transition-colors duration-200 hover:text-blue-primary"
-              >
-                Contact
-              </Link>
-            </div>
+          <div className="flex items-center gap-6">
+            <Link
+              href="/contact"
+              className="text-lg text-white transition-colors duration-200 hover:text-blue-primary"
+            >
+              Contact
+            </Link>
+            <Link href="/contact" className="btn-primary !px-8 !py-3 !text-lg">
+              Book a Demo
+            </Link>
           </div>
         </div>
         <div className="mt-12 border-t border-border pt-6 text-center text-sm text-text-muted">
-          &copy; {new Date().getFullYear()} Seald Healthcare. All rights
+          &copy; {new Date().getFullYear()} Seald Healthcare Inc. All rights
           reserved.
         </div>
       </div>

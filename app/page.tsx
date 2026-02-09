@@ -129,20 +129,20 @@ export default function HomePage() {
     <div className="flex items-center justify-between">
       <div className="max-w-[720px] px-6 md:px-0">
         <h1>
-          <span className="block text-[72px] sm:text-[96px] lg:text-[140px] font-bold leading-none bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(22,119,255,0.3)]">
-            Seald
+          <span className="block text-[72px] sm:text-[96px] lg:text-[96px] font-bold leading-none bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(22,119,255,0.3)]">
+            Secure PHI
           </span>
           <span className="mt-2 block text-[2rem] sm:text-[2.75rem] lg:text-[4rem] font-bold leading-[1.1] tracking-[-0.02em] text-navy">
-            Healthcare
+            at the Data Layer
           </span>
         </h1>
 
         <p className="mt-6 max-w-[60ch] text-xl leading-relaxed text-text-secondary md:mt-8 md:text-2xl lg:text-3xl">
-          Securing the world&apos;s health data without disrupting your existing infrastructure.
+          Seald Healthcare removes plaintext patient health information (PHI) by encrypting data at the source, giving you full control wherever data travels, without disrupting workflows.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
-          <PrimaryButton href="/contact">Book a pilot</PrimaryButton>
+          <PrimaryButton href="/contact">Book a Demo</PrimaryButton>
           <SecondaryButton href="/how">See how it works</SecondaryButton>
         </div>
       </div>
@@ -300,7 +300,7 @@ export default function HomePage() {
               Start with a 60-to-90-day pilot. No rip-and-replace required.
             </p>
             <div className="mt-8">
-              <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-semibold text-[#0B5CFF] transition hover:bg-white/90">Book a pilot</a>
+              <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-semibold text-[#0B5CFF] transition hover:bg-white/90">Book a Demo</a>
             </div>
           </div>
         </Container>
