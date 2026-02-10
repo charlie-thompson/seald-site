@@ -39,8 +39,8 @@ function Header() {
             priority
           />
           <div className="flex flex-col items-start">
-            <span className="text-5xl font-bold text-navy">Seald</span>
-            <span className="text-xl font-semibold text-[#1677FF]">Healthcare</span>
+            <span className="text-lg font-bold text-navy md:text-5xl">Seald</span>
+            <span className="text-xs font-semibold text-[#1677FF] md:text-xl">Healthcare</span>
           </div>
         </Link>
 

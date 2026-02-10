@@ -14,22 +14,25 @@ export default function MobileMenu() {
   }
 
   return (
-    <details className="relative md:hidden">
+    <details className="relative ml-auto md:hidden group">
       <summary className="cursor-pointer list-none p-2 text-text-secondary">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
+          className="block w-6 h-6 group-open:hidden"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          viewBox="0 0 24 24"
         >
-          <line x1="3" y1="6" x2="21" y2="6" />
-          <line x1="3" y1="12" x2="21" y2="12" />
-          <line x1="3" y1="18" x2="21" y2="18" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg
+          className="hidden w-6 h-6 group-open:block"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </summary>
       <div className="glass-panel absolute right-0 top-full mt-2 w-52 p-5 text-center" onClick={closeMenu}>
