@@ -144,7 +144,7 @@ export default function HomePage() {
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
           <PrimaryButton href="/contact">Book a Demo</PrimaryButton>
-          <SecondaryButton href="/how">See how it works</SecondaryButton>
+          {/* <SecondaryButton href="/how">See how it works</SecondaryButton> */}
         </div>
       </div>
 
