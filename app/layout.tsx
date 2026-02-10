@@ -28,7 +28,7 @@ const navLinks = [
 function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white">
-      <nav className="relative mx-auto flex max-w-6xl items-center px-6 py-1 md:py-2 md:justify-between">
+      <nav className="relative mx-auto flex max-w-6xl items-center px-6 py-4 md:py-2 md:justify-between">
         <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 md:static md:translate-x-0">
           <Image
             src="/brand/seald-footer-logo.png"
