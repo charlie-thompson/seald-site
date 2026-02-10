@@ -3,7 +3,7 @@ export default function SectionHeading({
   subtitle,
   centered = false,
 }: {
-  title: string;
+  title: React.ReactNode;
   subtitle?: string;
   centered?: boolean;
 }) {

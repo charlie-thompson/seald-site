@@ -245,6 +245,7 @@ export default function SecureDataLayer() {
             }}
           >
             The Secure Data Layer{" "}
+            <br className="md:hidden" />
             <span
               style={{
                 background: "linear-gradient(135deg, #22D3EE, #1677FF)",

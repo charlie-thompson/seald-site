@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <!-- Shield -->
+  <g transform="translate(10, 8)">
+    <!-- Shield body - white fill -->
+    <path d="M48 4 L88 20 V52 C88 72 68 88 48 96 C28 88 8 72 8 52 V20 L48 4Z" fill="white"/>
+    
+    <!-- Blue cross on shield -->
+    <rect x="40" y="28" width="16" height="40" rx="3" fill="#1677FF"/>
+    <rect x="28" y="40" width="40" height="16" rx="3" fill="#1677FF"/>
+    
+    <!-- White ECG line over the cross -->
+    <polyline 
+      points="24,52 36,52 40,40 48,64 56,46 60,52 72,52" 
+      stroke="white" 
+      stroke-width="4" 
+      stroke-linecap="round" 
+      stroke-linejoin="round" 
+      fill="none"
+    />
+  </g>
+  
+  <!-- "Seald" text - white -->
+  <text x="115" y="62" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="48" font-weight="800" fill="white" letter-spacing="-1">Seald</text>
+  
+  <!-- "Healthcare" text - white -->
+  <text x="117" y="95" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="white" letter-spacing="0.5">Healthcare</text>
+</svg>

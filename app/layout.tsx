@@ -11,12 +11,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Seald Healthcare | End-to-End Encryption for PHI",
+  title: "Seald Healthcare | Secure PHI at the Data Layer",
   description:
-    "Keep PHI encrypted everywhere while controlling access after it's shared. Enterprise encryption and access control for healthcare.",
+    "Seald Healthcare encrypts patient health information (PHI) at the source, keeping PHI secure and unreadable across systems, vendors, and workflows. Seamlessly integrate end-to-end encryption with full access control and audit visibility into your healthcare organization.",
+  icons: {
+    icon: '/brand/seald-shield-icon.png',
+    apple: '/brand/seald-shield-icon.png',
+  },
 };
 
 const navLinks = [
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -33,7 +38,7 @@ function Header() {
             className="h-[52px] w-auto"
             priority
           />
-          <div className="flex flex-col">
+          <div className="flex flex-col items-start">
             <span className="text-5xl font-bold text-navy">Seald</span>
             <span className="text-xl font-semibold text-[#1677FF]">Healthcare</span>
           </div>
@@ -66,21 +71,24 @@ function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
           <div>
-            <div className="flex items-center gap-2.5">
-              <Image
-                src="/brand/seald-shield-icon.png"
-                alt="Seald logo"
-                width={48}
-                height={48}
-                className="rounded-lg"
-              />
-              <span className="font-semibold text-white">Seald Healthcare</span>
-            </div>
+            <Image
+              src="/brand/seald-footer-logo-white.svg"
+              alt="Seald Healthcare"
+              width={176}
+              height={40}
+              className="w-44 h-auto"
+            />
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-text-muted">
               Protecting patient safety with security.
             </p>
           </div>
           <div className="flex items-center gap-6">
+            <Link
+              href="/about"
+              className="text-lg text-white transition-colors duration-200 hover:text-blue-primary"
+            >
+              About
+            </Link>
             <Link
               href="/contact"
               className="text-lg text-white transition-colors duration-200 hover:text-blue-primary"

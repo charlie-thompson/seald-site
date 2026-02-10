@@ -3,7 +3,6 @@ import SealdEncryptionHero from "@/app/components/SealdEncryptionHero";
 import SecureDataLayer from "@/app/components/SecureDataLayer";
 import SectionHeading from "@/app/components/SectionHeading";
 import GlassCard from "@/app/components/GlassCard";
-import { PrimaryButton, SecondaryButton } from "@/app/components/Buttons";
 import ScreenshotFrame from "@/app/components/ScreenshotFrame";
 
 const features = [
@@ -61,7 +60,7 @@ const steps = [
     step: "1",
     title: "Integrate",
     description:
-      "Easily add the Seald Healthcare SDK to your applications or workflows. Works with EHRs, portals, messaging, file sharing, and custom apps. Seamlessly complements AWS, Google Cloud, and Azure environments.",
+      "Add the Seald Healthcare SDK to your applications or workflows. Works with EHRs, portals, messaging, file sharing, and custom apps, and complements AWS, Google Cloud, and Azure environments.",
   },
   {
     step: "2",
@@ -127,10 +126,10 @@ export default function HomePage() {
   <div className="absolute bottom-0 left-20 h-[300px] w-[300px] rounded-full bg-[#0B5CFF]/10 blur-[100px] pointer-events-none" />
 
   <Container className="relative z-10">
-    <div className="flex items-center justify-between">
+    <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between">
       <div className="max-w-[720px] px-6 md:px-0">
         <h1>
-          <span className="block text-[72px] sm:text-[96px] lg:text-[96px] font-bold leading-none bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(22,119,255,0.3)]">
+          <span className="block whitespace-nowrap text-[56px] sm:text-[86px] lg:text-[86px] font-bold leading-none bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(22,119,255,0.3)]">
             Secure PHI
           </span>
           <span className="mt-2 block text-[2rem] sm:text-[2.75rem] lg:text-[4rem] font-bold leading-[1.1] tracking-[-0.02em] text-navy">
@@ -138,17 +137,17 @@ export default function HomePage() {
           </span>
         </h1>
 
-        <p className="mt-6 max-w-[60ch] text-xl leading-relaxed text-text-secondary md:mt-8 md:text-2xl lg:text-3xl">
+        <p className="mt-6 max-w-[60ch] text-center text-xl leading-relaxed text-text-secondary md:mt-8 md:text-left md:text-1xl lg:text-2xl">
           Seald Healthcare removes plaintext patient health information (PHI) by encrypting data at the source, giving you full control wherever data travels, without disrupting workflows.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
-          <PrimaryButton href="/contact">Book a Demo</PrimaryButton>
+          <a href="/contact" className="btn-primary !px-8 !py-3 !text-base md:!text-lg">Book a Demo</a>
           {/* <SecondaryButton href="/how">See how it works</SecondaryButton> */}
         </div>
       </div>
 
-      <div className="hidden md:flex items-center justify-center shrink-0 grow-0 overflow-hidden w-[540px] max-w-[45vw] ml-8">
+      <div className="mt-10 flex w-full items-center justify-center overflow-hidden md:mt-0 md:w-[540px] md:max-w-[45vw] md:shrink-0 md:grow-0 md:ml-8">
         <SealdEncryptionHero />
       </div>
     </div>
@@ -164,18 +163,18 @@ export default function HomePage() {
         <Container>
           <div className="[&_h2]:text-white [&_p]:text-white/70">
             <SectionHeading
-              title="Data Protection That Goes Beyond the Perimeter"
-              subtitle="Seald Healthcare protects patient data even after it leaves your systems. Encryption and access policies follow the data across every recipient and workflow. Organizations gain visibility and control over where their patient data travels."
+              title={<>Data Protection That Goes<br className="md:hidden" /> Beyond the Perimeter</>}
+              subtitle="Seald Healthcare protects patient data even after it leaves your systems. Encryption and access policies follow the data across every recipient and workflow, giving your organization full visibility and control."
               centered
             />
           </div>
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f) => (
-              <GlassCard key={f.title} className="p-7 !bg-white/10 !border-white/10">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-cyan">
+              <GlassCard key={f.title} className="p-7 !bg-white/10 !border-white/10 text-center md:text-left">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-cyan md:mx-0 [&_svg]:h-8 [&_svg]:w-8">
                   {f.icon}
                 </div>
-                <h3 className="mt-5 text-[0.95rem] font-semibold text-white">
+                <h3 className="mt-5 text-lg font-semibold text-white">
                   {f.title}
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-white/70">
@@ -192,14 +191,14 @@ export default function HomePage() {
         <div className="glow-shape glow-cyan left-[10%] top-1/2 h-[22rem] w-[22rem] -translate-y-1/2" />
         <Container>
           <div className="[&_h2]:text-white [&_p]:text-white/70"><SectionHeading title="How it Works" centered /></div>
-          <p className="mx-auto mt-4 max-w-3xl text-center text-white/60">Seald Healthcare integrates easily so you can focus on what matters most: protecting patient data without disrupting care.</p>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-white/60">Seald Healthcare integrates seamlessly so your team can focus on delivering high-quality care while keeping patient data secure.</p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {steps.map((s) => (
               <GlassCard key={s.step} className="glass-dark p-8 text-center">
                 <div className="brand-gradient mx-auto flex h-11 w-11 items-center justify-center rounded-full text-base font-bold text-white">
                   {s.step}
                 </div>
-                <h3 className="mt-5 text-[0.95rem] font-semibold text-white">
+                <h3 className="mt-5 text-lg font-semibold text-white">
                   {s.title}
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-white/70">
@@ -216,7 +215,7 @@ export default function HomePage() {
         <div className="glow-shape glow-blue left-[20%] top-0 h-[28rem] w-[28rem]" />
         <Container>
           <SectionHeading
-            title="See it in action"
+            title="See it in Action"
             subtitle="A simple, intuitive interface for managing encryption, access policies, and audit logs across all your healthcare workflows."
             centered
           />
@@ -259,7 +258,7 @@ export default function HomePage() {
               Seamlessly encrypt and remove plaintext PHI. No rip-and-replace required.
             </p>
             <div className="mt-8">
-              <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-semibold text-[#0B5CFF] transition hover:bg-white/90">Book a Demo</a>
+              <a href="/contact" className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 font-semibold text-[#0B5CFF] transition hover:bg-white/90">Book a Demo</a>
             </div>
           </div>
         </Container>

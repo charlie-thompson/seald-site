@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 const navLinks = [
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -31,19 +32,19 @@ export default function MobileMenu() {
           <line x1="3" y1="18" x2="21" y2="18" />
         </svg>
       </summary>
-      <div className="glass-panel absolute right-0 top-full mt-2 w-52 p-5" onClick={closeMenu}>
+      <div className="glass-panel absolute right-0 top-full mt-2 w-52 p-5 text-center" onClick={closeMenu}>
         {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="block py-2 text-sm text-text-secondary hover:text-navy"
+            className="block py-2 text-lg text-text-secondary hover:text-navy"
           >
             {link.label}
           </Link>
         ))}
         <Link
           href="/contact"
-          className="btn-primary mt-3 w-full !text-[0.8125rem]"
+          className="btn-primary mt-3 w-full !text-base"
         >
           Book a Demo
         </Link>

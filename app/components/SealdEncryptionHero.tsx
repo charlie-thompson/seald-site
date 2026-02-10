@@ -362,11 +362,11 @@ export default function SealdEncryptionHero() {
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
-                  filter: "drop-shadow(0 0 20px rgba(22,119,255,0.6)) drop-shadow(0 4px 12px rgba(0,0,0,0.15))",
+                  filter: "drop-shadow(0 0 28px rgba(22,119,255,0.8)) drop-shadow(0 0 56px rgba(34,211,238,0.4)) drop-shadow(0 4px 12px rgba(0,0,0,0.2))",
                   animation: "shieldPulse 1s ease-in-out infinite",
                 }}
               >
-                <SealdShield size={44} />
+                <SealdShield size={82} />
               </div>
             </div>
           )}
@@ -431,7 +431,7 @@ export default function SealdEncryptionHero() {
         ) : phase === "sweeping" ? (
           <span style={{ color: "#1677FF" }}>
             <span style={{ animation: "blink 0.8s infinite", fontSize: 20, verticalAlign: "middle" }}>⟩</span>{" "}
-            Seald encrypting at the data layer...
+            Seald Healthcare encrypting at the data layer...
           </span>
         ) : (
           <span style={{ color: "#059669" }}>
