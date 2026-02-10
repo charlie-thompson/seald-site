@@ -119,7 +119,7 @@ export default function HomePage() {
   return (
     <>
      {/* Hero */}
-<section className="relative overflow-hidden bg-white py-10 md:py-32 lg:py-40">
+<section className="relative overflow-hidden bg-white py-4 md:py-8 lg:py-16">
   {/* Glow orbs */}
   {/* <div className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-[#22D3EE]/15 blur-[120px] pointer-events-none" /> */}
   {/* <div className="absolute -top-20 -right-40 h-[600px] w-[600px] rounded-full bg-[#1677FF]/15 blur-[150px] pointer-events-none" /> */}
