@@ -59,7 +59,7 @@ function SealdShield({ size = 64 }) {
   );
 }
 
-function Particle({ style }) {
+function Particle({ style }: { style?: React.CSSProperties }) {
   return (
     <div
       style={{
