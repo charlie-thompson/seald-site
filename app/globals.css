@@ -3,6 +3,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
+summary::-webkit-details-marker { display: none; }
+summary::marker { display: none; content: ''; }
+
 :root {
   --navy: #0B1F3B;
   --blue-primary: #1677FF;
