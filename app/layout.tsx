@@ -28,19 +28,19 @@ const navLinks = [
 function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white">
-      <nav className="mx-auto flex max-w-6xl items-center justify-center px-6 py-5 md:justify-between">
-        <Link href="/" className="flex items-center gap-3">
+      <nav className="relative mx-auto flex max-w-6xl items-center px-6 py-5 md:justify-between">
+        <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 md:static md:translate-x-0">
           <Image
             src="/brand/seald-shield-icon.png"
             alt="Seald"
             width={115}
             height={100}
-            className="h-[52px] w-auto"
+            className="h-9 w-auto md:h-[52px]"
             priority
           />
           <div className="flex flex-col items-start">
-            <span className="text-lg font-bold text-navy md:text-5xl">Seald</span>
-            <span className="text-xs font-semibold text-[#1677FF] md:text-xl">Healthcare</span>
+            <span className="text-xl font-bold text-navy md:text-5xl">Seald</span>
+            <span className="text-sm font-semibold text-[#1677FF] md:text-xl">Healthcare</span>
           </div>
         </Link>
 
