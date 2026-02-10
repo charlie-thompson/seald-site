@@ -131,7 +131,7 @@ export default function AboutHeroGraphic() {
                 <path d="M8 1L14 4V8C14 12 11 15 8 16C5 15 2 12 2 8V4L8 1Z" fill="#22D3EE" opacity="0.2" stroke="#22D3EE" strokeWidth="1.5" />
                 <path d="M5.5 8l2 2 3.5-3.5" stroke="#22D3EE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              <span style={{ fontSize: 12, fontWeight: 700, color: "#22D3EE", textTransform: "uppercase", letterSpacing: "0.06em" }}>With Seald</span>
+              <span style={{ fontSize: 12, fontWeight: 700, color: "#22D3EE", textTransform: "uppercase", letterSpacing: "0.06em" }}>With Seald Healthcare</span>
             </div>
             <div style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", lineHeight: 1.6 }}>
               Data encrypted at the source. Zero plaintext exposure. Secure even during a breach.

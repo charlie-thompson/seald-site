@@ -121,9 +121,9 @@ export default function HomePage() {
      {/* Hero */}
 <section className="relative overflow-hidden bg-white py-24 md:py-32 lg:py-40">
   {/* Glow orbs */}
-  <div className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-[#22D3EE]/15 blur-[120px] pointer-events-none" />
-  <div className="absolute -top-20 -right-40 h-[600px] w-[600px] rounded-full bg-[#1677FF]/15 blur-[150px] pointer-events-none" />
-  <div className="absolute bottom-0 left-20 h-[300px] w-[300px] rounded-full bg-[#0B5CFF]/10 blur-[100px] pointer-events-none" />
+  {/* <div className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-[#22D3EE]/15 blur-[120px] pointer-events-none" /> */}
+  {/* <div className="absolute -top-20 -right-40 h-[600px] w-[600px] rounded-full bg-[#1677FF]/15 blur-[150px] pointer-events-none" /> */}
+  {/* <div className="absolute bottom-0 left-20 h-[300px] w-[300px] rounded-full bg-[#0B5CFF]/10 blur-[100px] pointer-events-none" /> */}
 
   <Container className="relative z-10">
     <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between">
@@ -137,17 +137,17 @@ export default function HomePage() {
           </span>
         </h1>
 
-        <p className="mt-6 max-w-[60ch] text-center text-xl leading-relaxed text-text-secondary md:mt-8 md:text-left md:text-1xl lg:text-2xl">
+        <p className="mt-6 max-w-[60ch] text-left text-xl leading-relaxed text-text-secondary md:mt-8 md:text-1xl lg:text-2xl">
           Seald Healthcare removes plaintext patient health information (PHI) by encrypting data at the source, giving you full control wherever data travels, without disrupting workflows.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
-          <a href="/contact" className="btn-primary !px-8 !py-3 !text-base md:!text-lg">Book a Demo</a>
+          <a href="/contact" className="btn-primary !px-8 !py-3 !text-lg">Book a Demo</a>
           {/* <SecondaryButton href="/how">See how it works</SecondaryButton> */}
         </div>
       </div>
 
-      <div className="mt-10 flex w-full items-center justify-center overflow-hidden md:mt-0 md:w-[540px] md:max-w-[45vw] md:shrink-0 md:grow-0 md:ml-8">
+      <div className="mt-10 flex h-[420px] w-full items-center justify-center overflow-hidden md:mt-0 md:h-auto md:w-[540px] md:max-w-[45vw] md:shrink-0 md:grow-0 md:ml-8">
         <SealdEncryptionHero />
       </div>
     </div>
@@ -171,10 +171,10 @@ export default function HomePage() {
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f) => (
               <GlassCard key={f.title} className="p-7 !bg-white/10 !border-white/10 text-center md:text-left">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-cyan md:mx-0 [&_svg]:h-8 [&_svg]:w-8">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-white/10 text-cyan md:mx-0 md:h-12 md:w-12 [&_svg]:h-8 [&_svg]:w-8">
                   {f.icon}
                 </div>
-                <h3 className="mt-5 text-lg font-semibold text-white">
+                <h3 className="mt-5 text-xl font-semibold text-white md:text-lg">
                   {f.title}
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-white/70">
@@ -195,10 +195,10 @@ export default function HomePage() {
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {steps.map((s) => (
               <GlassCard key={s.step} className="glass-dark p-8 text-center">
-                <div className="brand-gradient mx-auto flex h-11 w-11 items-center justify-center rounded-full text-base font-bold text-white">
+                <div className="brand-gradient mx-auto flex h-14 w-14 items-center justify-center rounded-full text-lg font-bold text-white md:h-11 md:w-11 md:text-base">
                   {s.step}
                 </div>
-                <h3 className="mt-5 text-lg font-semibold text-white">
+                <h3 className="mt-5 text-xl font-semibold text-white md:text-lg">
                   {s.title}
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-white/70">

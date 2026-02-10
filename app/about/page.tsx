@@ -72,7 +72,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden pb-16 pt-20 md:pt-24">
+      <section className="relative overflow-hidden pb-6 pt-12 md:pt-16">
         <div className="glow-shape glow-cyan -top-20 right-[20%] h-[30rem] w-[30rem]" />
         <Container>
           <div className="flex flex-col items-center gap-12 md:flex-row">
@@ -92,7 +92,7 @@ export default function AboutPage() {
       </section>
 
       {/* Approach / Mission */}
-      <section className="relative overflow-hidden py-16 md:py-20">
+      <section className="relative overflow-hidden py-4">
         <div className="glow-shape glow-blue left-[10%] top-0 h-[22rem] w-[22rem]" />
         <div className="glow-shape glow-cyan right-[5%] top-[40%] h-[22rem] w-[22rem]" />
         <Container className="max-w-3xl">
@@ -122,7 +122,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Team */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-4">
         <div className="glow-shape glow-blue right-[10%] top-0 h-[24rem] w-[24rem]" />
         <Container>
           <SectionHeading
@@ -189,7 +189,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
+      <section className="relative overflow-hidden bg-[#F6FAFF] py-4">
         <Container>
           <div className="mx-auto max-w-3xl rounded-3xl bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] px-8 py-16 text-center shadow-lg md:px-16">
             <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
