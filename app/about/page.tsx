@@ -77,10 +77,10 @@ export default function AboutPage() {
         <Container>
           <div className="flex flex-col items-center gap-12 md:flex-row">
             <div className="max-w-3xl">
-              <h1 className="text-3xl font-bold tracking-tight text-navy md:text-4xl lg:text-5xl">
-                Healthcare&apos;s Security Problem
+              <h1 className="text-center md:text-left text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-navy">
+                Healthcare&apos;s<br /> <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Security Problem</span>
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary text-center md:text-left">
                 Since 2009, over 370 million patient records have been exposed. That&apos;s more than the entire U.S. population. The average cost per breach is $10M. Most healthcare security is perimeter-focused and HIPAA-compliant, but compliant does not mean secure. The result is organizations that are technically &ldquo;compliant&rdquo; but still paralyzed by breaches. It&apos;s clear a new approach is needed, one that secures patient data itself, not just the perimeter.
               </p>
             </div>
@@ -98,7 +98,7 @@ export default function AboutPage() {
         <Container className="max-w-3xl">
           <div className="space-y-2">
             <GlassCard hover={false} className="p-8 md:p-12">
-              <SectionHeading title="Our Approach" />
+              <h2 className="text-center md:text-left text-3xl md:text-4xl font-extrabold tracking-tight text-navy">Our Approach</h2>
               <div className="mt-8 space-y-5 text-[0.9375rem] leading-relaxed text-text-secondary">
                 <p>
                   Seald Healthcare is building the encrypted data layer healthcare desperately needs. We encrypt patient data at the source with centralized key management and policy controls so that even if a breach occurs, data remains unreadable. You get complete visibility and control over who accesses data, when, and from where. Only want your staff to decrypt patient data during office hours? Simply write the rule in plain English with our AI Studio and the policy is automatically enforced.
@@ -110,7 +110,7 @@ export default function AboutPage() {
             </GlassCard>
 
             <GlassCard hover={false} className="p-8 md:p-12">
-              <SectionHeading title="Our Mission" />
+              <h2 className="text-center md:text-left text-3xl md:text-4xl font-extrabold tracking-tight text-navy">Our Mission</h2>
               <div className="mt-8 space-y-5 text-[0.9375rem] leading-relaxed text-text-secondary">
                 <p>
                   To solve the healthcare data breach problem by ensuring patient data remains secure and unreadable even in the event of a breach, while enabling healthcare organizations to share information freely, efficiently, and safely across the entire ecosystem.
@@ -125,11 +125,12 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-[#F6FAFF] py-4">
         <div className="glow-shape glow-blue right-[10%] top-0 h-[24rem] w-[24rem]" />
         <Container>
-          <SectionHeading
-            title="Our Founders"
-            subtitle="Seald Healthcare is built by operators, healthcare executives, and cryptographers united by a mission to solve the healthcare data breach problem. We are patient, thoughtful, and deliberate, focused on building solutions that healthcare organizations can trust every day."
-            centered
-          />
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-navy">Our Founders</h2>
+            <p className="mt-4 mx-auto max-w-2xl text-lg leading-relaxed text-text-secondary">
+              Seald Healthcare is built by operators, healthcare executives, and cryptographers united by a mission to solve the healthcare data breach problem. We are patient, thoughtful, and deliberate, focused on building solutions that healthcare organizations can trust every day.
+            </p>
+          </div>
 
           {/* Leadership row */}
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -159,7 +160,7 @@ export default function AboutPage() {
           </div>
 
           {/* Advisors */}
-          <h3 className="mt-16 text-center text-2xl font-bold text-navy">Advisors</h3>
+          <h3 className="mt-16 text-center text-3xl md:text-4xl font-extrabold tracking-tight text-navy">Advisors</h3>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-2 lg:mx-auto lg:max-w-3xl">
             {advisors.map((person) => (
               <div key={person.name} className="flex flex-col items-center text-center">
