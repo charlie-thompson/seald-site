@@ -168,7 +168,6 @@ export default function SealdEncryptionHero() {
     <div
       style={{
         width: "100%",
-        maxWidth: 540,
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
         position: "relative",
         overflow: "hidden",
@@ -229,7 +228,7 @@ export default function SealdEncryptionHero() {
           <div
             style={{
               display: "flex",
-              padding: "12px 24px 8px",
+              padding: "12px 12px 8px",
               borderBottom: "2px solid #e5e7eb",
             }}
           >
@@ -248,8 +247,8 @@ export default function SealdEncryptionHero() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  padding: "8px 24px",
-                  fontSize: 13,
+                  padding: "8px 12px",
+                  fontSize: 11,
                   fontFamily: '"SF Mono", "Fira Code", "Consolas", monospace',
                   borderBottom: "1px solid #f3f4f6",
                   transition: phase === "resetting" ? "background 0.5s ease" : "background 0.2s ease",
