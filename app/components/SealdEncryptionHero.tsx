@@ -82,7 +82,7 @@ export default function SealdEncryptionHero() {
   const animRef = useRef(null);
 
   useEffect(() => {
-    let timeout;
+    let timeout: ReturnType<typeof setTimeout>;
     const runCycle = () => {
       setPhase("sweeping");
       setSweepProgress(-0.05);
