@@ -1,5 +1,6 @@
 import Container from "@/app/components/Container";
-import HeroGraphic from "@/app/components/HeroGraphic";
+import SealdEncryptionHero from "@/app/components/SealdEncryptionHero";
+import SecureDataLayer from "@/app/components/SecureDataLayer";
 import SectionHeading from "@/app/components/SectionHeading";
 import GlassCard from "@/app/components/GlassCard";
 import { PrimaryButton, SecondaryButton } from "@/app/components/Buttons";
@@ -13,9 +14,9 @@ const features = [
         <path d="M7 11V7a5 5 0 0 1 10 0v4" />
       </svg>
     ),
-    title: "End-to-end encryption",
+    title: "End-to-End Encryption",
     description:
-      "PHI is encrypted on the sender's device and only decrypted by authorized recipients. No intermediary, including Seald, can read the data.",
+      "PHI is encrypted at the source and only decrypted by authorized recipients. No intermediary, including Seald Healthcare, can access the data.",
   },
   {
     icon: (
@@ -23,9 +24,9 @@ const features = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "Policy-based access control",
+    title: "Policy-Based Access Control",
     description:
-      "Define who can access data, for how long, and under what conditions. Revoke access at any time, even after sharing.",
+      "Set who can access data, for how long, and under what conditions. Access can be revoked at any time, even after sharing.",
   },
   {
     icon: (
@@ -36,9 +37,9 @@ const features = [
         <line x1="16" y1="17" x2="8" y2="17" />
       </svg>
     ),
-    title: "Full audit trail",
+    title: "Full Audit Trail",
     description:
-      "Every access event is logged with tamper-evident records. Know exactly who accessed what, when, and from where.",
+      "All access events are logged with tamper-evident records. Know exactly who accessed data, when, and from where.",
   },
   {
     icon: (
@@ -49,9 +50,9 @@ const features = [
         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: "Group-based access",
+    title: "Group-Based Access",
     description:
-      "Grant access to care teams, departments, or custom groups. When membership changes, data access updates automatically.",
+      "Easily grant access to care teams, departments, or custom groups. Data access updates automatically as membership changes.",
   },
 ];
 
@@ -60,17 +61,17 @@ const steps = [
     step: "1",
     title: "Integrate",
     description:
-      "Add the Seald SDK to your application or workflow. Works with EHRs, portals, messaging, file sharing, and custom apps.",
+      "Easily add the Seald Healthcare SDK to your applications or workflows. Works with EHRs, portals, messaging, file sharing, and custom apps. Seamlessly complements AWS, Google Cloud, and Azure environments.",
   },
   {
     step: "2",
-    title: "Encrypt and set policy",
+    title: "Encrypt and Set Policy",
     description:
-      "Data is encrypted before it leaves the source system. Access policies travel with the data, not with the network.",
+      "Data is encrypted at the source before it leaves your system. Access policies travel with the data, not the network.",
   },
   {
     step: "3",
-    title: "Control after sharing",
+    title: "Control After Sharing",
     description:
       "Revoke access, update permissions, and audit usage in real time. Policies are enforced at decryption, not at the perimeter.",
   },
@@ -147,8 +148,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="hidden md:flex items-center justify-center shrink-0">
-        <HeroGraphic />
+      <div className="hidden md:flex items-center justify-center shrink-0 grow-0 overflow-hidden w-[540px] max-w-[45vw] ml-8">
+        <SealdEncryptionHero />
       </div>
     </div>
   </Container>
@@ -163,8 +164,8 @@ export default function HomePage() {
         <Container>
           <div className="[&_h2]:text-white [&_p]:text-white/70">
             <SectionHeading
-              title="Data protection that goes beyond the perimeter"
-              subtitle="Seald protects PHI after it leaves your systems. Encryption and access policies follow the data across every recipient, device, and workflow."
+              title="Data Protection That Goes Beyond the Perimeter"
+              subtitle="Seald Healthcare protects patient data even after it leaves your systems. Encryption and access policies follow the data across every recipient and workflow. Organizations gain visibility and control over where their patient data travels."
               centered
             />
           </div>
@@ -190,7 +191,8 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-[#050d1a] py-16 md:py-20">
         <div className="glow-shape glow-cyan left-[10%] top-1/2 h-[22rem] w-[22rem] -translate-y-1/2" />
         <Container>
-          <div className="[&_h2]:text-white [&_p]:text-white/70"><SectionHeading title="How it works" centered /></div>
+          <div className="[&_h2]:text-white [&_p]:text-white/70"><SectionHeading title="How it Works" centered /></div>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-white/60">Seald Healthcare integrates in minutes easily so you can focus on what matters most: protecting patient data without disrupting care.</p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {steps.map((s) => (
               <GlassCard key={s.step} className="glass-dark p-8 text-center">
@@ -215,7 +217,7 @@ export default function HomePage() {
         <Container>
           <SectionHeading
             title="See it in action"
-            subtitle="A clean, purpose-built interface for managing encryption, access policies, and audit logs across your healthcare workflows."
+            subtitle="A simple, intuitive interface for managing encryption, access policies, and audit logs across all your healthcare workflows."
             centered
           />
           <div className="mt-16 grid gap-6 md:grid-cols-3">
@@ -244,60 +246,17 @@ export default function HomePage() {
       </section>
 
       {/* Core Capabilities */}
-      <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
-        <div className="glow-shape glow-cyan right-[5%] top-[10%] h-[24rem] w-[24rem]" />
-        <Container>
-          <SectionHeading title="Core Capabilities" centered />
-          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <GlassCard className="p-7">
-              <h3 className="text-[0.95rem] font-semibold text-navy">End-to-end encryption</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
-                PHI is encrypted on the sender&apos;s device and only decrypted by authorized recipients. No intermediary, including Seald, can access plaintext data.
-              </p>
-            </GlassCard>
-            <GlassCard className="p-7">
-              <h3 className="text-[0.95rem] font-semibold text-navy">Persistent access policies</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
-                Define who can access data, from which devices, during which time windows, and revoke access at any time, even after data has been shared.
-              </p>
-            </GlassCard>
-            <GlassCard className="p-7">
-              <h3 className="text-[0.95rem] font-semibold text-navy">Tamper-evident audit logs</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
-                Every access, denial, and policy change is logged with cryptographic integrity. Logs cannot be altered without detection.
-              </p>
-            </GlassCard>
-            <GlassCard className="p-7">
-              <h3 className="text-[0.95rem] font-semibold text-navy">SDK-first integration</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
-                Integrate encryption into your existing applications with a few lines of code. No UI changes or database re-architecture required.
-              </p>
-            </GlassCard>
-            <GlassCard className="p-7">
-              <h3 className="text-[0.95rem] font-semibold text-navy">Automatic key management</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
-                Keys are issued, rotated, rewrapped, and revoked automatically. No cryptography expertise required from your team.
-              </p>
-            </GlassCard>
-            <GlassCard className="p-7">
-              <h3 className="text-[0.95rem] font-semibold text-navy">Group and role-based access</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
-                Assign encryption permissions to teams, departments, or roles. Access updates propagate automatically when group membership changes.
-              </p>
-            </GlassCard>
-          </div>
-        </Container>
-      </section>
+      <SecureDataLayer />
 
       {/* Final CTA */}
       <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
         <Container>
           <div className="mx-auto max-w-3xl rounded-3xl bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] px-8 py-16 text-center shadow-lg md:px-16">
             <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
-              Ready to protect PHI beyond the perimeter?
+              Ready to Be Secure — Not Just Compliant?
             </h2>
             <p className="mt-4 text-white/80">
-              Start with a 60-to-90-day pilot. No rip-and-replace required.
+              Seamlessly encrypt and remove plaintext PHI. No rip-and-replace required.
             </p>
             <div className="mt-8">
               <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-semibold text-[#0B5CFF] transition hover:bg-white/90">Book a Demo</a>

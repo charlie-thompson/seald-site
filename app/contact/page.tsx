@@ -17,8 +17,11 @@ export default function ContactPage() {
         <div className="glow-shape glow-cyan right-[5%] bottom-0 h-[20rem] w-[20rem]" />
         <Container className="relative max-w-2xl">
           <h1 className="text-3xl font-bold tracking-tight text-navy md:text-4xl">
-            Get in touch
+            See Seald Healthcare in Action
           </h1>
+          <p className="mt-4 text-lg leading-relaxed text-text-secondary">
+            Share your use case and we&apos;ll show you how to remove plaintext PHI without disrupting workflows. We always respond within 24 hours.
+          </p>
         
 
           <GlassCard hover={false} className="mt-12 p-8">

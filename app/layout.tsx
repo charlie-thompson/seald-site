@@ -28,14 +28,14 @@ function Header() {
           <Image
             src="/brand/seald-shield-icon.png"
             alt="Seald"
-            width={52}
-            height={52}
+            width={115}
+            height={100}
             className="h-[52px] w-auto"
             priority
           />
           <div className="flex flex-col">
-            <span className="text-xl font-bold text-navy">Seald</span>
-            <span className="text-sm font-semibold text-[#1677FF]">Healthcare</span>
+            <span className="text-5xl font-bold text-navy">Seald</span>
+            <span className="text-xl font-semibold text-[#1677FF]">Healthcare</span>
           </div>
         </Link>
 
