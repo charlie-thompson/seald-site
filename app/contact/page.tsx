@@ -17,7 +17,7 @@ export default function ContactPage() {
         <div className="glow-shape glow-cyan right-[5%] bottom-0 h-[20rem] w-[20rem]" />
         <Container className="relative max-w-2xl">
           <h1 className="text-center md:text-left text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-navy">
-            See Seald<br className="md:hidden" /> Healthcare <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">in Action</span>
+            See <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Seald<br className="md:hidden" /> Healthcare</span> in Action
           </h1>
           <p className="mt-4 text-left text-lg leading-relaxed text-text-secondary">
             Share your use case and we&apos;ll show you how to remove plaintext PHI without disrupting workflows. We always respond within 24 hours.
