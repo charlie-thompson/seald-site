@@ -192,7 +192,7 @@ export default function HomePage() {
         <div className="glow-shape glow-cyan left-[10%] top-1/2 h-[22rem] w-[22rem] -translate-y-1/2" />
         <Container>
           <div className="[&_h2]:text-white [&_p]:text-white/70"><SectionHeading title="How it Works" centered /></div>
-          <p className="mx-auto mt-4 max-w-3xl text-center text-white/60">Seald Healthcare integrates in minutes easily so you can focus on what matters most: protecting patient data without disrupting care.</p>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-white/60">Seald Healthcare integrates easily so you can focus on what matters most: protecting patient data without disrupting care.</p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {steps.map((s) => (
               <GlassCard key={s.step} className="glass-dark p-8 text-center">
