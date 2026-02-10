@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   description:
     "Seald Healthcare encrypts patient health information (PHI) at the source, keeping PHI secure and unreadable across systems, vendors, and workflows. Seamlessly integrate end-to-end encryption with full access control and audit visibility into your healthcare organization.",
   icons: {
-    icon: '/brand/seald-shield-icon.png',
-    apple: '/brand/seald-shield-icon.png',
+    icon: '/brand/seald_shield_icon_clean.svg',
+    apple: '/brand/seald_shield_icon_clean.svg',
   },
 };
 

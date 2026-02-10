@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2D89FF"/>
+      <stop offset="100%" stop-color="#0A5BFF"/>
+    </linearGradient>
+    <linearGradient id="ecgGrad" x1="260" y1="0" x2="764" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#19D3FF"/>
+      <stop offset="50%" stop-color="#0B7BFF"/>
+      <stop offset="100%" stop-color="#19D3FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shield -->
+  <path d="
+    M 256 168
+    Q 512 68 768 168
+    C 840 216 872 292 872 372
+    L 872 560
+    C 872 764 726 906 512 980
+    C 298 906 152 764 152 560
+    L 152 372
+    C 152 292 184 216 256 168
+    Z"
+    fill="url(#shieldGrad)"/>
+
+  <!-- Cross -->
+  <g fill="#FFFFFF">
+    <rect x="412" y="248" width="200" height="528" rx="70" ry="70"/>
+    <rect x="248" y="412" width="528" height="200" rx="70" ry="70"/>
+  </g>
+
+  <!-- ECG line -->
+  <path d="M 260 512
+           L 360 512
+           L 410 430
+           L 470 600
+           L 540 360
+           L 610 540
+           L 664 512
+           L 764 512"
+        fill="none"
+        stroke="url(#ecgGrad)"
+        stroke-width="64"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>
