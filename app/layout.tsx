@@ -28,7 +28,7 @@ const navLinks = [
 function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <nav className="mx-auto flex max-w-6xl items-center justify-center px-6 py-5 md:justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/brand/seald-shield-icon.png"
@@ -72,7 +72,7 @@ function Footer() {
         <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <Image
-              src="/brand/seald-footer-logo-white.svg"
+              src="/brand/seald-logo-white.svg"
               alt="Seald Healthcare"
               width={176}
               height={40}

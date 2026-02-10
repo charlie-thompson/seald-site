@@ -119,7 +119,7 @@ export default function HomePage() {
   return (
     <>
      {/* Hero */}
-<section className="relative overflow-hidden bg-white py-24 md:py-32 lg:py-40">
+<section className="relative overflow-hidden bg-white py-10 md:py-32 lg:py-40">
   {/* Glow orbs */}
   {/* <div className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-[#22D3EE]/15 blur-[120px] pointer-events-none" /> */}
   {/* <div className="absolute -top-20 -right-40 h-[600px] w-[600px] rounded-full bg-[#1677FF]/15 blur-[150px] pointer-events-none" /> */}
@@ -127,7 +127,7 @@ export default function HomePage() {
 
   <Container className="relative z-10">
     <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between">
-      <div className="max-w-[720px] px-6 md:px-0">
+      <div className="max-w-[720px] px-6 text-center md:px-0 md:text-left">
         <h1>
           <span className="block whitespace-nowrap text-[56px] sm:text-[86px] lg:text-[86px] font-bold leading-none bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(22,119,255,0.3)]">
             Secure PHI
@@ -137,18 +137,21 @@ export default function HomePage() {
           </span>
         </h1>
 
-        <p className="mt-6 max-w-[60ch] text-left text-xl leading-relaxed text-text-secondary md:mt-8 md:text-1xl lg:text-2xl">
+        <p className="mt-6 max-w-[60ch] text-center text-xl leading-relaxed text-text-secondary md:mt-8 md:text-left md:text-1xl lg:text-2xl">
           Seald Healthcare removes plaintext patient health information (PHI) by encrypting data at the source, giving you full control wherever data travels, without disrupting workflows.
         </p>
 
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row md:mt-10">
+        <div className="mt-8 hidden flex-col gap-4 sm:flex-row md:mt-10 md:flex">
           <a href="/contact" className="btn-primary !px-8 !py-3 !text-lg">Book a Demo</a>
-          {/* <SecondaryButton href="/how">See how it works</SecondaryButton> */}
         </div>
       </div>
 
       <div className="my-6 flex h-[620px] w-full items-center justify-center overflow-hidden px-0 md:my-0 md:h-auto md:w-[540px] md:max-w-[45vw] md:shrink-0 md:grow-0 md:ml-8">
         <SealdEncryptionHero />
+      </div>
+
+      <div className="flex justify-center md:hidden">
+        <a href="/contact" className="btn-primary !px-8 !py-3 !text-lg">Book a Demo</a>
       </div>
     </div>
   </Container>
