@@ -147,7 +147,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="my-6 flex h-[560px] w-full items-center justify-center overflow-hidden md:my-0 md:h-auto md:w-[540px] md:max-w-[45vw] md:shrink-0 md:grow-0 md:ml-8">
+      <div className="my-6 flex h-[620px] w-full items-center justify-center overflow-hidden px-0 md:my-0 md:h-auto md:w-[540px] md:max-w-[45vw] md:shrink-0 md:grow-0 md:ml-8">
         <SealdEncryptionHero />
       </div>
     </div>

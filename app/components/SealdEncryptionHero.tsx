@@ -232,7 +232,7 @@ export default function SealdEncryptionHero() {
               borderBottom: "2px solid #e5e7eb",
             }}
           >
-            <div style={{ ...colHeaderStyle, width: 130, flexShrink: 0 }}>Field</div>
+            <div style={{ ...colHeaderStyle, width: 100, flexShrink: 0 }}>Field</div>
             <div style={{ ...colHeaderStyle, flex: 1 }}>Value</div>
             <div style={{ ...colHeaderStyle, width: 80, flexShrink: 0, textAlign: "center" }}>Status</div>
           </div>
@@ -247,7 +247,7 @@ export default function SealdEncryptionHero() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  padding: "8px 12px",
+                  padding: "6px 12px",
                   fontSize: 11,
                   fontFamily: '"SF Mono", "Fira Code", "Consolas", monospace',
                   borderBottom: "1px solid #f3f4f6",
@@ -266,7 +266,7 @@ export default function SealdEncryptionHero() {
                 {/* Label */}
                 <span
                   style={{
-                    width: 130,
+                    width: 100,
                     flexShrink: 0,
                     color: isEncrypted ? "#1677FF" : "#6b7280",
                     fontSize: 11,
@@ -402,7 +402,7 @@ export default function SealdEncryptionHero() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div
           style={{
-            width: 130,
+            width: 100,
             height: 8,
             background: "linear-gradient(180deg, #bcc2ca 0%, #a8aeb7 100%)",
             borderRadius: "0 0 8px 8px",
