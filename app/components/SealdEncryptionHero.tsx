@@ -4,6 +4,14 @@ import { useState, useEffect, useRef } from "react";
 // ─── Seald Healthcare — Encryption Sweep Animation v2 ───
 // White screen, three-column table layout, shield sweeps to encrypt.
 
+interface ParticleData {
+  id: number;
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+}
+
 const PLAINTEXT_ROWS = [
   { label: "Patient Name", value: "Sarah Mitchell" },
   { label: "DOB", value: "03/15/1987" },
@@ -78,8 +86,8 @@ function Particle({ style }: { style?: React.CSSProperties }) {
 export default function SealdEncryptionHero() {
   const [sweepProgress, setSweepProgress] = useState(-0.05);
   const [phase, setPhase] = useState("idle");
-  const [particles, setParticles] = useState([]);
-  const animRef = useRef(null);
+  const [particles, setParticles] = useState<ParticleData[]>([]);
+  const animRef = useRef<number | null>(null);
 
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout>;
@@ -87,10 +95,10 @@ export default function SealdEncryptionHero() {
       setPhase("sweeping");
       setSweepProgress(-0.05);
 
-      let start = null;
+      let start: number | null = null;
       const duration = 2800;
 
-      const animate = (timestamp) => {
+      const animate = (timestamp: number) => {
         if (!start) start = timestamp;
         const elapsed = timestamp - start;
         const progress = Math.min(elapsed / duration, 1.05);
@@ -145,7 +153,7 @@ export default function SealdEncryptionHero() {
 
   const sweepX = sweepProgress * 100;
 
-  const getRowState = (i) => {
+  const getRowState = (i: number) => {
     const isEncrypted =
       phase === "done" ||
       (phase === "sweeping" && sweepProgress > (i + 1) / PLAINTEXT_ROWS.length);
@@ -447,7 +455,7 @@ export default function SealdEncryptionHero() {
   );
 }
 
-const colHeaderStyle = {
+const colHeaderStyle: React.CSSProperties = {
   fontSize: 10,
   fontWeight: 700,
   textTransform: "uppercase",
