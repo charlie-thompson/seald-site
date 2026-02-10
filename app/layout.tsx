@@ -69,7 +69,7 @@ function Footer() {
   return (
     <footer className="section-dark border-t border-white/15">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
+        <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <Image
               src="/brand/seald-footer-logo-white.svg"
@@ -82,7 +82,7 @@ function Footer() {
               Protecting patient safety with security.
             </p>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-6">
             <Link
               href="/about"
               className="text-lg text-white transition-colors duration-200 hover:text-blue-primary"
