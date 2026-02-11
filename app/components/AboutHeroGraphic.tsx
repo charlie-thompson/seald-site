@@ -60,7 +60,7 @@ export default function AboutHeroGraphic() {
             borderRadius: 14,
             padding: "20px 16px",
           }}>
-            <div style={{ fontSize: 32, fontWeight: 800, color: "#ef4444", lineHeight: 1, marginBottom: 4 }}>370M+</div>
+            <div style={{ fontSize: 32, fontWeight: 800, color: "#ef4444", lineHeight: 1, marginBottom: 4 }}>846M+</div>
             <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>Patient records exposed since 2009</div>
           </div>
 

@@ -81,7 +81,7 @@ export default function AboutPage() {
                 Healthcare&apos;s<br /> <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Security Problem</span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary text-left md:text-left">
-                Since 2009, over 370 million patient records have been exposed. That&apos;s more than the entire U.S. population. The average cost per breach is $10M. Most healthcare security is perimeter-focused and HIPAA-compliant, but compliant does not mean secure. The result is organizations that are technically &ldquo;compliant&rdquo; but still paralyzed by breaches. It&apos;s clear a new approach is needed, one that secures patient data itself, not just the perimeter.
+                Since 2009, over 846 million patient records have been exposed, with the average cost per breach reaching $10M. Most healthcare security is perimeter-focused and HIPAA-compliant, but compliant does not mean secure. The result is organizations that are technically &ldquo;compliant&rdquo; but still paralyzed by breaches. It&apos;s clear a new approach is needed, one that secures patient data itself, not just the perimeter.
               </p>
             </div>
             <div className="shrink-0">
