@@ -4,6 +4,7 @@ import SecureDataLayer from "@/app/components/SecureDataLayer";
 import SectionHeading from "@/app/components/SectionHeading";
 import GlassCard from "@/app/components/GlassCard";
 import ScreenshotFrame from "@/app/components/ScreenshotFrame";
+import WhitePaperCTA from "@/app/components/WhitePaperCTA";
 
 const features = [
   {
@@ -128,12 +129,15 @@ export default function HomePage() {
   <Container className="relative z-10">
     <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between">
       <div className="max-w-[720px] px-6 text-center md:px-0 md:text-left">
-        <h1>
-          <span className="block whitespace-nowrap text-[56px] sm:text-[86px] lg:text-[86px] font-bold leading-none bg-gradient-to-r from-[#22D3EE] via-[#1677FF] to-[#0B5CFF] bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(22,119,255,0.3)]">
-            Secure PHI
+        <h1 className="leading-[1.15] tracking-[-0.02em]">
+          <span className="block text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1F3B] whitespace-nowrap">
+            Encryption That Fits
           </span>
-          <span className="mt-2 block text-[2rem] sm:text-[2.75rem] lg:text-[4rem] font-bold leading-[1.1] tracking-[-0.02em] text-navy">
-            at the Data Layer
+          <span className="block text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent whitespace-nowrap">
+            Your Workflow
+          </span>
+          <span className="block text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#0B1F3B] whitespace-nowrap">
+            Not the Other Way Around
           </span>
         </h1>
 
@@ -212,6 +216,9 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      {/* White Paper CTA */}
+      <WhitePaperCTA />
 
       {/* Product proof / screenshots */}
       <section className="relative overflow-hidden py-16 md:py-20">

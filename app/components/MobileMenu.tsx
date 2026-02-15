@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/about", label: "About" },
+  { href: "/resources", label: "Resources" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -45,6 +46,12 @@ export default function MobileMenu() {
             {link.label}
           </Link>
         ))}
+        <Link
+          href="/resources"
+          className="btn-primary mt-3 w-full !text-base !bg-white !border-2 !border-[#0B1F3B] !text-[#0B1F3B] !bg-none !shadow-none hover:!bg-gray-50"
+        >
+          White Paper
+        </Link>
         <Link
           href="/contact"
           className="btn-primary mt-3 w-full !text-base"

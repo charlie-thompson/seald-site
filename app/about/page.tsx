@@ -33,6 +33,7 @@ const leadership = [
     bio: [
       "15+ years in healthcare, PHI security, HIPAA compliance, and revenue cycle automation",
       "Technical-sales hybrid with deep domain expertise",
+      "Founder-operator, leading cross-functional delivery for clients from strategy through implementation, with clear accountability to outcomes",
     ],
   },
 ];

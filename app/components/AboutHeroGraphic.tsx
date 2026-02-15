@@ -1,7 +1,42 @@
 'use client';
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+
+function useCountUp(target: number, duration: number, delay: number) {
+  const [value, setValue] = useState(0);
+  const rafRef = useRef<number>();
+
+  useEffect(() => {
+    const easeOutExpo = (t: number) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
+
+    const timeout = setTimeout(() => {
+      const start = performance.now();
+      const animate = (now: number) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeOutExpo(progress);
+        setValue(Math.round(eased * target));
+        if (progress < 1) {
+          rafRef.current = requestAnimationFrame(animate);
+        }
+      };
+      rafRef.current = requestAnimationFrame(animate);
+    }, delay);
+
+    return () => {
+      clearTimeout(timeout);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, [target, duration, delay]);
+
+  return value;
+}
 
 export default function AboutHeroGraphic() {
+  const stat1 = useCountUp(846, 4000, 0);
+  const stat2 = useCountUp(10, 4000, 200);
+  const stat3 = useCountUp(725, 4000, 400);
+  const stat4 = useCountUp(14, 4000, 600);
+
   return (
     <div
       style={{
@@ -60,7 +95,7 @@ export default function AboutHeroGraphic() {
             borderRadius: 14,
             padding: "20px 16px",
           }}>
-            <div style={{ fontSize: 32, fontWeight: 800, color: "#ef4444", lineHeight: 1, marginBottom: 4 }}>846M+</div>
+            <div style={{ fontSize: 32, fontWeight: 800, color: "#ef4444", lineHeight: 1, marginBottom: 4 }}>{stat1}M+</div>
             <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>Patient records exposed since 2009</div>
           </div>
 
@@ -71,7 +106,7 @@ export default function AboutHeroGraphic() {
             borderRadius: 14,
             padding: "20px 16px",
           }}>
-            <div style={{ fontSize: 32, fontWeight: 800, color: "#f59e0b", lineHeight: 1, marginBottom: 4 }}>$10M</div>
+            <div style={{ fontSize: 32, fontWeight: 800, color: "#f59e0b", lineHeight: 1, marginBottom: 4 }}>${stat2}M</div>
             <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>Average cost per healthcare breach</div>
           </div>
 
@@ -82,7 +117,7 @@ export default function AboutHeroGraphic() {
             borderRadius: 14,
             padding: "20px 16px",
           }}>
-            <div style={{ fontSize: 32, fontWeight: 800, color: "#ef4444", lineHeight: 1, marginBottom: 4 }}>725+</div>
+            <div style={{ fontSize: 32, fontWeight: 800, color: "#ef4444", lineHeight: 1, marginBottom: 4 }}>{stat3}+</div>
             <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>Major breaches reported in 2023 alone</div>
           </div>
 
@@ -93,7 +128,7 @@ export default function AboutHeroGraphic() {
             borderRadius: 14,
             padding: "20px 16px",
           }}>
-            <div style={{ fontSize: 32, fontWeight: 800, color: "#f59e0b", lineHeight: 1, marginBottom: 4 }}>14yrs</div>
+            <div style={{ fontSize: 32, fontWeight: 800, color: "#f59e0b", lineHeight: 1, marginBottom: 4 }}>{stat4}yrs</div>
             <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>Healthcare has led all industries in breach cost</div>
           </div>
         </div>
