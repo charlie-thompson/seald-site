@@ -36,9 +36,10 @@ export default function WhitePaperCTA() {
   };
 
   return (
-    <section className="w-full bg-white py-16 md:py-20">
+    <section className="bg-white py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="items-center md:grid md:grid-cols-2 md:gap-12">
+        <div className="border-2 border-gray-200 rounded-2xl p-8 md:p-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Column */}
           <div className="text-center md:text-left">
             <p className="mb-4 text-xs font-bold uppercase tracking-widest text-[#1677FF]">
@@ -65,7 +66,7 @@ export default function WhitePaperCTA() {
 
           {/* Right Column */}
           <div className="mt-10 md:mt-0">
-            <Link href="/resources" className="mx-auto md:mx-0 flex aspect-[3/4] max-h-[400px] flex-col justify-between rounded-2xl bg-gradient-to-br from-[#0B1F3B] to-[#1060dd] p-8 shadow-xl cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02]">
+            <Link href="/resources" className="mx-auto flex aspect-[3/4] max-h-[400px] flex-col justify-between rounded-2xl bg-gradient-to-br from-[#0B1F3B] to-[#1060dd] p-8 shadow-xl cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02]">
               <div>
                 <p className="text-xs font-bold tracking-widest text-[#22D3EE]">
                   SEALD HEALTHCARE
@@ -80,6 +81,7 @@ export default function WhitePaperCTA() {
               </p>
             </Link>
           </div>
+        </div>
         </div>
       </div>
 
