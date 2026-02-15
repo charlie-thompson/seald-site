@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 function useCountUp(target: number, duration: number, delay: number) {
   const [value, setValue] = useState(0);
-  const rafRef = useRef<number>();
+  const rafRef = useRef<number>(0);
 
   useEffect(() => {
     const easeOutExpo = (t: number) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
