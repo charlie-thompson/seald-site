@@ -130,19 +130,19 @@ export default function HomePage() {
     <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between">
       <div className="max-w-[720px] px-6 text-center md:px-0 md:text-left">
         <h1 className="leading-[1.15] tracking-[-0.02em]">
-          <span className="block text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1F3B] whitespace-nowrap">
-            Encryption That Fits
+          <span className="block text-3xl md:text-4xl lg:text-6xl font-extrabold text-[#0B1F3B] whitespace-nowrap">
+          Persistent Encryption.
           </span>
-          <span className="block text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent whitespace-nowrap">
-            Your Workflow
+          <span className="block text-4xl md:text-5xl lg:text-7xl font-extrabold bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent whitespace-nowrap">
+          Total Control.
           </span>
           <span className="block text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#0B1F3B] whitespace-nowrap">
-            Not the Other Way Around
+             Zero Workflow Disruption.
           </span>
         </h1>
 
         <p className="mt-6 max-w-[60ch] text-left text-xl leading-relaxed text-text-secondary md:mt-8 md:text-left md:text-1xl lg:text-2xl">
-          Seald Healthcare removes plaintext patient health information (PHI) by encrypting data at the source, giving you full control wherever data travels, without disrupting workflows.
+          Seald Healthcare protects patient data even after it leaves your systems. Encryption and access policies follow the data across every recipient and workflow, giving your organization full visibility and control.
         </p>
 
         <div className="mt-8 hidden flex-col gap-4 sm:flex-row md:mt-10 md:flex">
@@ -171,7 +171,7 @@ export default function HomePage() {
           <div className="[&_h2]:text-white [&_p]:text-white/70">
             <SectionHeading
               title={<>Data Protection That Goes<br className="md:hidden" /> Beyond the Perimeter</>}
-              subtitle="Seald Healthcare protects patient data even after it leaves your systems. Encryption and access policies follow the data across every recipient and workflow, giving your organization full visibility and control."
+              subtitle="Seald Healthcare secures PHI at the data layer where you control who and how your data is accessed - even after it's shared to a third party"
               centered
             />
           </div>

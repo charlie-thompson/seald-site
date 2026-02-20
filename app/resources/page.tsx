@@ -81,7 +81,7 @@ export default function ResourcesPage() {
         <div className="glow-shape glow-blue -top-20 left-[20%] h-[28rem] w-[28rem]" />
         <div className="glow-shape glow-cyan right-[5%] bottom-0 h-[20rem] w-[20rem]" />
         <Container className="relative max-w-4xl">
-          <h1 className="text-center text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0B1F3B]">
+          <h1 className="text-center text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent whitespace-nowrap">
             Explore Resources
           </h1>
           <p className="mt-4 text-center text-lg text-gray-600">

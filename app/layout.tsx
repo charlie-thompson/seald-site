@@ -107,9 +107,6 @@ function Footer() {
               <Link href="/contact" className="btn-primary !px-8 !py-3 !text-lg">
                 Book a Demo
               </Link>
-              <Link href="/resources" className="inline-flex items-center justify-center rounded-xl bg-white border-2 border-[#0B1F3B] px-8 py-3 text-lg font-medium text-[#0B1F3B] transition-all duration-200 hover:bg-gray-50 hover:-translate-y-[1px] hover:shadow-[0_2px_4px_rgba(11,31,59,0.15),0_8px_24px_rgba(11,31,59,0.1),0_0_0_3px_rgba(11,31,59,0.05)]">
-                White Paper
-              </Link>
             </div>
           </div>
         </div>
