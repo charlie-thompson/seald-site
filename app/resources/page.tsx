@@ -52,6 +52,10 @@ export default function ResourcesPage() {
     setUnlockedIds(getUnlockedIds());
   }, []);
 
+  // Show all resources (filtering hidden until more content types are added)
+  const filtered = resources;
+
+  /* Original filtering logic - re-enable when search/filter tabs are restored
   const filtered = resources.filter((r) => {
     if (!typeMatchesFilter(r.type, activeFilter)) return false;
     if (search.trim()) {
@@ -64,6 +68,7 @@ export default function ResourcesPage() {
     }
     return true;
   });
+  */
 
   const handleCardClick = (resource: Resource) => {
     if (!resource.gated || unlockedIds.includes(resource.id)) {
@@ -88,7 +93,7 @@ export default function ResourcesPage() {
             Insights, research, and guides on healthcare data security
           </p>
 
-          {/* Search */}
+          {/* Search - hidden until more content types are added
           <div className="mt-10 relative">
             <svg
               className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400"
@@ -108,8 +113,9 @@ export default function ResourcesPage() {
               className="w-full bg-white border border-gray-200 rounded-lg pl-12 pr-4 py-3 text-[#0B1F3B] text-sm focus:border-[#1677FF] focus:ring-1 focus:ring-[#1677FF] focus:outline-none transition-colors"
             />
           </div>
+          */}
 
-          {/* Filter Tabs */}
+          {/* Filter Tabs - hidden until more content types are added
           <div className="mt-5 flex gap-2 overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide">
             {filterTabs.map((tab) => (
               <button
@@ -125,6 +131,7 @@ export default function ResourcesPage() {
               </button>
             ))}
           </div>
+          */}
         </Container>
       </section>
 

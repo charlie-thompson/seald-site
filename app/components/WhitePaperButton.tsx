@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import GatedContentModal from "./GatedContentModal";
 
 const RESOURCE_ID = "compliance-vs-security-2026";
@@ -27,16 +28,23 @@ export default function WhitePaperButton({
 }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     setUnlocked(isUnlocked());
   }, []);
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent) => {
+    // Close any parent <details> (mobile menu) before opening modal
+    const details = (e.currentTarget as HTMLElement).closest("details");
+    if (details) details.removeAttribute("open");
+
     if (unlocked) {
       window.open(PDF_URL, "_blank");
     } else {
-      setModalOpen(true);
+      // Small delay to let the menu close first
+      setTimeout(() => setModalOpen(true), 50);
     }
   };
 
@@ -45,14 +53,18 @@ export default function WhitePaperButton({
       <button onClick={handleClick} className={className}>
         {children ?? "White Paper"}
       </button>
-      <GatedContentModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        resourceId={RESOURCE_ID}
-        resourceTitle={RESOURCE_TITLE}
-        pdfUrl={PDF_URL}
-        onSuccess={() => setUnlocked(true)}
-      />
+      {mounted &&
+        createPortal(
+          <GatedContentModal
+            isOpen={modalOpen}
+            onClose={() => setModalOpen(false)}
+            resourceId={RESOURCE_ID}
+            resourceTitle={RESOURCE_TITLE}
+            pdfUrl={PDF_URL}
+            onSuccess={() => setUnlocked(true)}
+          />,
+          document.body
+        )}
     </>
   );
 }
