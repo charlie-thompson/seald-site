@@ -267,9 +267,7 @@ export default function SecureDataLayer() {
               letterSpacing: "0.005em",
             }}
           >
-            Everything you need to encrypt PHI at the source, enforce access policies
-            in real time, and maintain a complete chain of custody — without changing
-            how your teams work.
+            Everything you need to encrypt PHI at the source, enforce access policies in real time, and maintain a complete chain of custody. Seald secures data at the layer that matters most, giving you control over who accesses your data, how, and under what conditions, even after it leaves your systems and reaches third-party vendors, business associates, and partners. When a vendor is breached or a contract expires, your data stays protected.
           </p>
         </div>
 

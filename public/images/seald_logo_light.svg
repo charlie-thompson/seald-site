@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160" width="500" height="160">
+  <defs>
+    <linearGradient id="sg" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#47b0f5"/>
+      <stop offset="40%" stop-color="#007ff2"/>
+      <stop offset="100%" stop-color="#0062cc"/>
+    </linearGradient>
+    <clipPath id="ec"><rect x="30" y="52" width="80" height="52" rx="6"/></clipPath>
+  </defs>
+  <!-- Shield -->
+  <path d="M70,6 L128,30 C128,30 132,52 132,80 C132,120 104,148 70,158 C36,148 8,120 8,80 C8,52 12,30 12,30 Z" fill="url(#sg)" stroke="#42ccf3" stroke-width="3"/>
+  <!-- Envelope -->
+  <rect x="30" y="52" width="80" height="52" rx="6" fill="none" stroke="white" stroke-width="3.5"/>
+  <g clip-path="url(#ec)">
+    <path d="M30,52 L70,82 L110,52" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M30,104 L55,82" fill="none" stroke="white" stroke-width="3.5"/>
+    <path d="M110,104 L85,82" fill="none" stroke="white" stroke-width="3.5"/>
+  </g>
+  <!-- Text -->
+  <text x="170" y="95" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="72" font-weight="800" fill="#072a50" letter-spacing="-1.5">Seald</text>
+  <text x="175" y="130" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="600" fill="#00a7f8" letter-spacing="0.5">Healthcare</text>
+</svg>

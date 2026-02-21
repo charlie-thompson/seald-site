@@ -209,12 +209,24 @@ export default function GatedContentModal({
               <h3 className="mt-3 text-xl font-bold text-[#0B1F3B]">
                 Download: {resourceTitle}
               </h3>
-              <p className="mt-1 text-gray-500 text-sm">
-                Enter your details to access this resource.
-              </p>
+              <div className="mt-4 border-l-2 border-[#1677FF]/30 pl-4 py-2 bg-blue-50/50 rounded-r-lg">
+                <p className="text-[#0B1F3B]/70 text-sm italic leading-relaxed">
+                  &ldquo;Healthcare does not have a compliance problem. It has a data security problem. Between 2009 and 2024, more than 846 million patient records were exposed or impermissibly disclosed in reported healthcare data breaches, according to the HHS Office for Civil Rights breach portal. In 2024 alone, roughly 276 million records were compromised, a 64% increase over the previous year&apos;s already record-breaking total. The single largest incident, a ransomware attack on Change Healthcare, affected an estimated 192.7 million individuals, nearly two-thirds of the U.S. population&rdquo;
+                </p>
+                <button
+                  type="submit"
+                  form="gated-form"
+                  className="mt-3 inline-flex items-center gap-1 text-[#1677FF] font-semibold text-sm uppercase tracking-wide hover:text-[#1060dd] transition-colors"
+                >
+                  Read More
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5-5 5M6 12h12" />
+                  </svg>
+                </button>
+              </div>
             </div>
 
-            <form onSubmit={handleSubmit} noValidate className="space-y-4">
+            <form id="gated-form" onSubmit={handleSubmit} noValidate className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-[#0B1F3B] mb-1">
                   First Name<span className="text-red-500">*</span>

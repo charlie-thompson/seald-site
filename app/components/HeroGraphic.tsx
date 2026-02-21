@@ -105,7 +105,7 @@ export default function HeroGraphic() {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="hero-shield-pulse">
           <Image
-            src="/brand/seald-shield-icon.png"
+            src="/images/seald_icon.svg"
             alt="Seald shield"
             width={200}
             height={200}

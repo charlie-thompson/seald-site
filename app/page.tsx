@@ -6,56 +6,6 @@ import GlassCard from "@/app/components/GlassCard";
 import ScreenshotFrame from "@/app/components/ScreenshotFrame";
 import WhitePaperCTA from "@/app/components/WhitePaperCTA";
 
-const features = [
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6">
-        <rect x="3" y="11" width="18" height="11" rx="2" />
-        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-      </svg>
-    ),
-    title: "End-to-End Encryption",
-    description:
-      "PHI is encrypted at the source and only decrypted by authorized recipients. No intermediary, including Seald Healthcare, can access the data.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    title: "Policy-Based Access Control",
-    description:
-      "Set who can access data, for how long, and under what conditions. Access can be revoked at any time, even after sharing.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14,2 14,8 20,8" />
-        <line x1="16" y1="13" x2="8" y2="13" />
-        <line x1="16" y1="17" x2="8" y2="17" />
-      </svg>
-    ),
-    title: "Full Audit Trail",
-    description:
-      "All access events are logged with tamper-evident records. Know exactly who accessed data, when, and from where.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
-    title: "Group-Based Access",
-    description:
-      "Easily grant access to care teams, departments, or custom groups. Data access updates automatically as membership changes.",
-  },
-];
-
 const steps = [
   {
     step: "1",
@@ -127,22 +77,22 @@ export default function HomePage() {
   {/* <div className="absolute bottom-0 left-20 h-[300px] w-[300px] rounded-full bg-[#0B5CFF]/10 blur-[100px] pointer-events-none" /> */}
 
   <Container className="relative z-10">
-    <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between">
+    <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-20">
       <div className="max-w-[720px] px-6 text-center md:px-0 md:text-left">
         <h1 className="leading-[1.15] tracking-[-0.02em]">
           <span className="block text-3xl md:text-4xl lg:text-6xl font-extrabold text-[#0B1F3B] whitespace-nowrap">
-          Persistent Encryption.
+          Persistent Encryption
           </span>
           <span className="block text-4xl md:text-5xl lg:text-7xl font-extrabold bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent whitespace-nowrap">
-          Total Control.
+          Total Control
           </span>
-          <span className="block text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#0B1F3B] whitespace-nowrap">
-             Zero Workflow Disruption.
-          </span>
+          {/* <span className="block text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#0B1F3B] whitespace-nowrap"> */}
+             {/* Zero Workflow Disruption */}
+          {/* </span> */}
         </h1>
 
         <p className="mt-6 max-w-[60ch] text-left text-xl leading-relaxed text-text-secondary md:mt-8 md:text-left md:text-1xl lg:text-2xl">
-          Seald Healthcare protects patient data even after it leaves your systems. Encryption and access policies follow the data across every recipient and workflow, giving your organization full visibility and control.
+          Seald Healthcare protects patient data even after it leaves your systems. Encryption and access policies follow the data across every recipient and workflow, giving your organization full visibility and control, with zero disruptions.
         </p>
 
         <div className="mt-8 hidden flex-col gap-4 sm:flex-row md:mt-10 md:flex">
@@ -150,7 +100,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="my-6 flex h-[620px] w-full items-center justify-center overflow-hidden px-0 md:my-0 md:h-auto md:w-[540px] md:max-w-[45vw] md:shrink-0 md:grow-0 md:ml-8">
+      <div className="my-6 flex h-[620px] w-full items-center justify-center overflow-hidden px-0 md:my-0 md:h-auto md:w-[540px] md:max-w-[45vw] md:shrink-0 md:grow-0">
         <SealdEncryptionHero />
       </div>
 
@@ -164,61 +114,53 @@ export default function HomePage() {
 
 
 
-      {/* Features */}
-      <section className="relative overflow-hidden bg-[#050d1a] py-16 md:py-20">
+      {/* AI Policy Studio */}
+      <section className="relative overflow-hidden bg-[#050d1a] py-20 md:py-28">
         <div className="glow-shape glow-blue right-[5%] top-0 h-[24rem] w-[24rem]" />
+        <div className="glow-shape glow-cyan left-[10%] bottom-0 h-[20rem] w-[20rem]" />
         <Container>
-          <div className="[&_h2]:text-white [&_p]:text-white/70">
-            <SectionHeading
-              title={<>Data Protection That Goes<br className="md:hidden" /> Beyond the Perimeter</>}
-              subtitle="Seald Healthcare secures PHI at the data layer where you control who and how your data is accessed - even after it's shared to a third party"
-              centered
-            />
+          <div className="text-center">
+            <h2 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
+              AI Policy Studio
+            </h2>
+            <p className="mx-auto mt-6 max-w-[700px] text-left text-base leading-relaxed text-white/70 md:text-lg">
+              Define access policies in plain English. Seald Healthcare&apos;s AI Policy Studio translates natural language into enforceable cryptographic policies, so administrators can write rules like &ldquo;Only allow clinical staff to decrypt patient records during office hours from managed devices&rdquo; instead of configuring complex rule engines. Reduce misconfiguration risk while dramatically simplifying policy management.
+            </p>
           </div>
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((f) => (
-              <GlassCard key={f.title} className="p-7 !bg-white/10 !border-white/10 text-center md:text-left">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-white/10 text-cyan md:mx-0 md:h-12 md:w-12 [&_svg]:h-8 [&_svg]:w-8">
-                  {f.icon}
-                </div>
-                <h3 className="mt-5 text-xl font-semibold text-white md:text-lg">
-                  {f.title}
-                </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-white/70">
-                  {f.description}
-                </p>
-              </GlassCard>
-            ))}
+          <div className="mx-auto mt-12 max-w-[900px]">
+            <div className="overflow-hidden rounded-xl border border-white/10 shadow-2xl shadow-black/40">
+              <ScreenshotFrame
+                src="/screens/ai-policy-studio.png"
+                alt="AI Policy Studio — write access policies in plain English"
+                caption="Write access policies in plain English"
+              />
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* How it works */}
+      {/* About Us Blurb */}
       <section className="relative overflow-hidden bg-[#050d1a] py-16 md:py-20">
-        <div className="glow-shape glow-cyan left-[10%] top-1/2 h-[22rem] w-[22rem] -translate-y-1/2" />
-        <Container>
-          <div className="[&_h2]:text-white [&_p]:text-white/70"><SectionHeading title="How it Works" centered /></div>
-          <p className="mx-auto mt-4 max-w-3xl text-center text-white/60">Seald Healthcare integrates seamlessly so your team can focus on delivering high-quality care while keeping patient data secure.</p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {steps.map((s) => (
-              <GlassCard key={s.step} className="glass-dark p-8 text-center">
-                <div className="brand-gradient mx-auto flex h-14 w-14 items-center justify-center rounded-full text-lg font-bold text-white md:h-11 md:w-11 md:text-base">
-                  {s.step}
-                </div>
-                <h3 className="mt-5 text-xl font-semibold text-white md:text-lg">
-                  {s.title}
-                </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-white/70">
-                  {s.description}
-                </p>
-              </GlassCard>
-            ))}
+        <Container className="max-w-3xl text-center">
+          <p className="mb-4 text-xl font-bold uppercase tracking-[0.15em] text-[#42ccf3]">
+            Our Mission
+          </p>
+          <p className="text-base leading-relaxed text-white/70 md:text-lg">
+            Seald Healthcare exists for one reason: to ensure that every piece of patient data is protected, not just where it is stored, but everywhere it travels. Our team brings together deep expertise in applied cryptography, healthcare compliance, and enterprise software to solve the industry&apos;s most fundamental security gap. We believe that protecting patient data should never come at the cost of clinical efficiency.
+          </p>
+          <div className="mt-8">
+            <a href="/about" className="inline-flex items-center justify-center rounded-lg bg-[#007ff2] px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-[#0066cc] hover:-translate-y-[1px] shadow-lg shadow-blue-500/20">
+              Learn More About Us
+            </a>
           </div>
         </Container>
       </section>
 
       {/* White Paper CTA */}
       <WhitePaperCTA />
+
+      {/* Core Capabilities */}
+      <SecureDataLayer />
 
       {/* Product proof / screenshots */}
       <section className="relative overflow-hidden py-16 md:py-20">
@@ -254,8 +196,29 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Core Capabilities */}
-      <SecureDataLayer />
+      {/* How it works */}
+      <section className="relative overflow-hidden bg-[#050d1a] py-16 md:py-20">
+        <div className="glow-shape glow-cyan left-[10%] top-1/2 h-[22rem] w-[22rem] -translate-y-1/2" />
+        <Container>
+          <div className="[&_h2]:text-white [&_p]:text-white/70"><SectionHeading title="How it Works" centered /></div>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-white/60">Seald Healthcare integrates seamlessly so your team can focus on delivering high-quality care while keeping patient data secure.</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {steps.map((s) => (
+              <GlassCard key={s.step} className="glass-dark p-8 text-center">
+                <div className="brand-gradient mx-auto flex h-14 w-14 items-center justify-center rounded-full text-lg font-bold text-white md:h-11 md:w-11 md:text-base">
+                  {s.step}
+                </div>
+                <h3 className="mt-5 text-xl font-semibold text-white md:text-lg">
+                  {s.title}
+                </h3>
+                <p className="mt-2.5 text-sm leading-relaxed text-white/70">
+                  {s.description}
+                </p>
+              </GlassCard>
+            ))}
+          </div>
+        </Container>
+      </section>
 
       {/* Final CTA */}
       <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">

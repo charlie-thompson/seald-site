@@ -311,7 +311,7 @@ export default function SealdEncryptionHero() {
                     whiteSpace: "nowrap",
                   }}
                 >
-                  {isEncrypted ? <><img src="/brand/seald-shield-icon.png" alt="Seald" style={{ width: 14, height: 14, display: 'inline-block', verticalAlign: 'middle', marginRight: 2 }} /> Seald</> : "⚠ Open"}
+                  {isEncrypted ? <><img src="/images/seald_icon.svg" alt="Seald" style={{ width: 14, height: 14, display: 'inline-block', verticalAlign: 'middle', marginRight: 2 }} /> Seald</> : "⚠ Open"}
                 </span>
               </div>
             );

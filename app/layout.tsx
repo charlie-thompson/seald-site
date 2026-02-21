@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "@/app/components/MobileMenu";
+import WhitePaperButton from "@/app/components/WhitePaperButton";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,8 +16,13 @@ export const metadata: Metadata = {
   description:
     "Seald Healthcare encrypts patient health information (PHI) at the source, keeping PHI secure and unreadable across systems, vendors, and workflows. Seamlessly integrate end-to-end encryption with full access control and audit visibility into your healthcare organization.",
   icons: {
-    icon: '/brand/seald_shield_icon_clean.svg',
-    apple: '/brand/seald_shield_icon_clean.svg',
+    icon: [
+      { url: '/images/seald_favicon_32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/seald_favicon_16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/images/seald_favicon_180x180.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 
@@ -32,11 +38,11 @@ function Header() {
       <nav className="relative mx-auto flex max-w-6xl items-center px-6 py-4 md:py-2 md:justify-between">
         <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 md:static md:translate-x-0">
           <Image
-            src="/brand/seald-footer-logo.png"
-            alt="Seald"
-            width={215}
-            height={200}
-            className="w-40 h-auto md:w-36"
+            src="/images/seald_logo_light.svg"
+            alt="Seald Healthcare"
+            width={240}
+            height={78}
+            className="w-48 h-auto md:w-[240px]"
             priority
           />
         </Link>
@@ -52,9 +58,9 @@ function Header() {
             </Link>
           ))}
           <div className="flex items-center gap-3">
-            <Link href="/resources" className="inline-flex items-center justify-center rounded-xl bg-white border-2 border-[#0B1F3B] px-8 py-3 text-lg font-medium text-[#0B1F3B] transition-all duration-200 hover:bg-gray-50 hover:-translate-y-[1px] hover:shadow-[0_2px_4px_rgba(11,31,59,0.15),0_8px_24px_rgba(11,31,59,0.1),0_0_0_3px_rgba(11,31,59,0.05)]">
+            <WhitePaperButton className="inline-flex items-center justify-center rounded-xl bg-white border-2 border-[#0B1F3B] px-8 py-3 text-lg font-medium text-[#0B1F3B] transition-all duration-200 hover:bg-gray-50 hover:-translate-y-[1px] hover:shadow-[0_2px_4px_rgba(11,31,59,0.15),0_8px_24px_rgba(11,31,59,0.1),0_0_0_3px_rgba(11,31,59,0.05)]">
               White Paper
-            </Link>
+            </WhitePaperButton>
             <Link href="/contact" className="btn-primary !px-8 !py-3 !text-lg">
               Book a Demo
             </Link>
@@ -74,7 +80,7 @@ function Footer() {
         <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <Image
-              src="/brand/seald-logo-white.svg"
+              src="/images/seald_logo_dark.svg"
               alt="Seald Healthcare"
               width={176}
               height={40}

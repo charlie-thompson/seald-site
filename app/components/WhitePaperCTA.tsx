@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import GatedContentModal from "./GatedContentModal";
 
 const RESOURCE_ID = "compliance-vs-security-2026";
@@ -66,7 +65,7 @@ export default function WhitePaperCTA() {
 
           {/* Right Column */}
           <div className="mt-10 md:mt-0">
-            <Link href="/resources" className="mx-auto flex aspect-[3/4] max-h-[400px] flex-col justify-between rounded-2xl bg-gradient-to-br from-[#0B1F3B] to-[#1060dd] p-8 shadow-xl cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02]">
+            <button onClick={handleClick} className="mx-auto flex aspect-[3/4] max-h-[400px] w-full flex-col justify-between rounded-2xl bg-gradient-to-br from-[#0B1F3B] to-[#1060dd] p-8 shadow-xl cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] text-left">
               <div>
                 <p className="text-xs font-bold tracking-widest text-[#22D3EE]">
                   SEALD HEALTHCARE
@@ -79,7 +78,7 @@ export default function WhitePaperCTA() {
               <p className="text-sm text-blue-200">
                 White Paper | 2026 Edition
               </p>
-            </Link>
+            </button>
           </div>
         </div>
         </div>
