@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import Container from "@/app/components/Container";
 import GatedContentModal from "@/app/components/GatedContentModal";
 
@@ -13,22 +14,45 @@ const resources = [
     type: "White Paper",
     date: "February 2026",
     gated: true,
-    thumbnail: null,
     pdfUrl:
       "https://244915777.fs1.hubspotusercontent-na2.net/hubfs/244915777/Seald-Healthcare-Whitepaper-Compliance-vs-Security-2026.pdf",
+    href: "/resources/whitepaper",
+    cta: null,
+  },
+  {
+    id: "42-breaches-in-45-days",
+    title: "42 Breaches in 45 Days",
+    description:
+      "AI-powered cyberattacks are industrializing. In the first 45 days of 2026, 42 healthcare breaches were reported to HHS. Here is what has to change.",
+    type: "Article",
+    date: "February 2026",
+    gated: false,
+    pdfUrl: "",
+    href: "/resources/articles/ai-accelerating-healthcare-cyberattacks",
+    cta: "Read Article",
+  },
+  {
+    id: "breach-heard-around-the-world",
+    title: "The Breach Heard Around the World",
+    description:
+      "Why CFOs, not just CISOs, are now driving healthcare cybersecurity strategy after the Change Healthcare breach exposed the financial reality of cyber risk.",
+    type: "Article",
+    date: "February 2026",
+    gated: false,
+    pdfUrl: "",
+    href: "/resources/articles/breach-heard-around-the-world",
+    cta: "Read Article",
   },
 ];
 
 type Resource = (typeof resources)[number];
 
-const filterTabs = ["All", "White Papers", "Articles", "Blogs", "Videos"];
+const filterTabs = ["All", "White Papers", "Articles"];
 
 function typeMatchesFilter(type: string, filter: string) {
   if (filter === "All") return true;
   if (filter === "White Papers") return type === "White Paper";
   if (filter === "Articles") return type === "Article";
-  if (filter === "Blogs") return type === "Blog";
-  if (filter === "Videos") return type === "Video";
   return false;
 }
 
@@ -52,10 +76,6 @@ export default function ResourcesPage() {
     setUnlockedIds(getUnlockedIds());
   }, []);
 
-  // Show all resources (filtering hidden until more content types are added)
-  const filtered = resources;
-
-  /* Original filtering logic - re-enable when search/filter tabs are restored
   const filtered = resources.filter((r) => {
     if (!typeMatchesFilter(r.type, activeFilter)) return false;
     if (search.trim()) {
@@ -68,10 +88,14 @@ export default function ResourcesPage() {
     }
     return true;
   });
-  */
 
   const handleCardClick = (resource: Resource) => {
-    if (!resource.gated || unlockedIds.includes(resource.id)) {
+    // Non-gated articles navigate directly
+    if (!resource.gated) {
+      return; // Link handles navigation
+    }
+    // Gated resources open modal or download
+    if (unlockedIds.includes(resource.id)) {
       window.open(resource.pdfUrl, "_blank");
     } else {
       setSelectedResource(resource);
@@ -93,7 +117,7 @@ export default function ResourcesPage() {
             Insights, research, and guides on healthcare data security
           </p>
 
-          {/* Search - hidden until more content types are added
+          {/* Search */}
           <div className="mt-10 relative">
             <svg
               className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400"
@@ -113,9 +137,8 @@ export default function ResourcesPage() {
               className="w-full bg-white border border-gray-200 rounded-lg pl-12 pr-4 py-3 text-[#0B1F3B] text-sm focus:border-[#1677FF] focus:ring-1 focus:ring-[#1677FF] focus:outline-none transition-colors"
             />
           </div>
-          */}
 
-          {/* Filter Tabs - hidden until more content types are added
+          {/* Filter Tabs */}
           <div className="mt-5 flex gap-2 overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide">
             {filterTabs.map((tab) => (
               <button
@@ -131,7 +154,6 @@ export default function ResourcesPage() {
               </button>
             ))}
           </div>
-          */}
         </Container>
       </section>
 
@@ -143,12 +165,58 @@ export default function ResourcesPage() {
               {filtered.map((resource) => {
                 const isUnlocked =
                   !resource.gated || unlockedIds.includes(resource.id);
+
+                // Determine CTA text and icon
+                let ctaText: string;
+                let ctaIcon: React.ReactNode;
+
+                if (resource.cta) {
+                  // Article — arrow icon
+                  ctaText = resource.cta;
+                  ctaIcon = (
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5-5 5M6 12h12" />
+                    </svg>
+                  );
+                } else if (resource.gated && !isUnlocked) {
+                  ctaText = "Unlock & Download";
+                  ctaIcon = (
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <rect x="3" y="11" width="18" height="11" rx="2" />
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                  );
+                } else {
+                  ctaText = "Download";
+                  ctaIcon = (
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <rect x="3" y="11" width="18" height="11" rx="2" />
+                      <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+                    </svg>
+                  );
+                }
+
+                // For non-gated articles, the whole card is a link
+                const CardWrapper = resource.gated
+                  ? ({ children }: { children: React.ReactNode }) => (
+                      <div
+                        onClick={() => handleCardClick(resource)}
+                        className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
+                      >
+                        {children}
+                      </div>
+                    )
+                  : ({ children }: { children: React.ReactNode }) => (
+                      <Link
+                        href={resource.href}
+                        className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow cursor-pointer block"
+                      >
+                        {children}
+                      </Link>
+                    );
+
                 return (
-                  <div
-                    key={resource.id}
-                    onClick={() => handleCardClick(resource)}
-                    className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
-                  >
+                  <CardWrapper key={resource.id}>
                     {/* Thumbnail */}
                     <div className="h-48 bg-gradient-to-br from-[#0B1F3B] to-[#1677FF] flex items-center justify-center">
                       <svg
@@ -170,9 +238,21 @@ export default function ResourcesPage() {
                       <span className="inline-block text-xs font-semibold uppercase tracking-wide text-[#1677FF] bg-blue-50 rounded-full px-3 py-1">
                         {resource.type}
                       </span>
-                      <h3 className="mt-3 font-bold text-lg text-[#0B1F3B]">
-                        {resource.title}
-                      </h3>
+
+                      {resource.gated && resource.href ? (
+                        <Link
+                          href={resource.href}
+                          className="mt-3 block font-bold text-lg text-[#0B1F3B] hover:text-[#1677FF] transition-colors"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {resource.title}
+                        </Link>
+                      ) : (
+                        <h3 className="mt-3 font-bold text-lg text-[#0B1F3B]">
+                          {resource.title}
+                        </h3>
+                      )}
+
                       <p className="mt-2 text-gray-600 text-sm line-clamp-2">
                         {resource.description}
                       </p>
@@ -181,53 +261,12 @@ export default function ResourcesPage() {
                           {resource.date}
                         </span>
                         <span className="inline-flex items-center gap-1.5 text-[#1677FF] font-semibold text-sm">
-                          {resource.gated && !isUnlocked ? (
-                            <>
-                              {/* Lock icon */}
-                              <svg
-                                className="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth={2}
-                              >
-                                <rect
-                                  x="3"
-                                  y="11"
-                                  width="18"
-                                  height="11"
-                                  rx="2"
-                                />
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                              </svg>
-                              Unlock &amp; Download
-                            </>
-                          ) : (
-                            <>
-                              {/* Unlocked icon */}
-                              <svg
-                                className="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth={2}
-                              >
-                                <rect
-                                  x="3"
-                                  y="11"
-                                  width="18"
-                                  height="11"
-                                  rx="2"
-                                />
-                                <path d="M7 11V7a5 5 0 0 1 9.9-1" />
-                              </svg>
-                              Download
-                            </>
-                          )}
+                          {ctaIcon}
+                          {ctaText}
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </CardWrapper>
                 );
               })}
             </div>

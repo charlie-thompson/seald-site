@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     images: [{ url: "/images/seald_logo_light_1024w.png" }],
     type: "article",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Compliance vs. Security in Healthcare 2026 | Seald Healthcare",
+    description:
+      "Since 2009, over 846 million patient records have been exposed in healthcare breaches. This white paper examines why HIPAA compliance does not equal security and how data-layer encryption closes the gap.",
+    images: ["/images/seald_logo_light_1024w.png"],
+  },
   alternates: {
     canonical: "https://www.sealdhealthcare.com/resources/whitepaper",
   },
