@@ -39,7 +39,7 @@ function Header() {
         <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 md:static md:translate-x-0">
           <Image
             src="/images/seald_logo_light.svg"
-            alt="Seald Healthcare"
+            alt="Seald Healthcare | Logo"
             width={240}
             height={78}
             className="w-48 h-auto md:w-[240px]"
@@ -81,7 +81,7 @@ function Footer() {
           <div>
             <Image
               src="/images/seald_logo_dark.svg"
-              alt="Seald Healthcare"
+              alt="Seald Healthcare | Logo"
               width={176}
               height={40}
               className="w-44 h-auto"

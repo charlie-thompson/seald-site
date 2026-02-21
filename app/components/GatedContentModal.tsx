@@ -203,15 +203,15 @@ export default function GatedContentModal({
           /* Form State */
           <>
             <div className="mb-6">
-              <p className="text-[#1677FF] font-bold text-xs tracking-widest uppercase">
-                SEALD HEALTHCARE
+              <p className="text-[#1677FF] font-bold text-xs tracking-widest">
+                Seald Healthcare
               </p>
               <h3 className="mt-3 text-xl font-bold text-[#0B1F3B]">
                 Download: {resourceTitle}
               </h3>
               <div className="mt-4 border-l-2 border-[#1677FF]/30 pl-4 py-2 bg-blue-50/50 rounded-r-lg">
                 <p className="text-[#0B1F3B]/70 text-sm italic leading-relaxed">
-                  &ldquo;Healthcare does not have a compliance problem. It has a data security problem. Between 2009 and 2024, more than 846 million patient records were exposed or impermissibly disclosed in reported healthcare data breaches, according to the HHS Office for Civil Rights breach portal. In 2024 alone, roughly 276 million records were compromised, a 64% increase over the previous year&apos;s already record-breaking total. The single largest incident, a ransomware attack on Change Healthcare, affected an estimated 192.7 million individuals, nearly two-thirds of the U.S. population&rdquo;
+                  &ldquo;Since 2009, despite rigorous compliance efforts, over 846 million patient records have been exposed, with 276 million compromised in 2024 alone. It&apos;s clear, healthcare does not have a compliance problem. It has a data security problem....&rdquo;
                 </p>
                 <button
                   type="submit"

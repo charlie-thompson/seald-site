@@ -48,7 +48,7 @@ export default function WhitePaperCTA() {
               Compliance vs. Security in Healthcare
             </h2>
             <p className="mb-6 leading-relaxed text-gray-600">
-              Over 846 million patient records exposed since 2009. Average breach cost: $9.77 million. This white paper examines why HIPAA compliance alone cannot prevent breaches and how data-layer security closes the gap.
+              Over 846 million patient records exposed since 2009. Average breach cost: $9.77 million. This white paper explores why HIPAA compliance alone cannot prevent breaches and how data-layer security closes the gap.
             </p>
             <div className="flex justify-center md:justify-start">
             <button

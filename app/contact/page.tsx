@@ -20,7 +20,7 @@ export default function ContactPage() {
             See <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Seald<br className="md:hidden" /> Healthcare</span> in Action
           </h1>
           <p className="mt-4 text-left text-lg leading-relaxed text-text-secondary">
-            Share your use case and we&apos;ll show you how to remove plaintext PHI without disrupting workflows. We always respond within 24 hours.
+            Share your use case and we&apos;ll show you how you can take back control of your patient data without disrupting workflows. We always respond within 12-hours.
           </p>
         
 

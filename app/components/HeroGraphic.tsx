@@ -106,7 +106,7 @@ export default function HeroGraphic() {
         <div className="hero-shield-pulse">
           <Image
             src="/images/seald_icon.svg"
-            alt="Seald shield"
+            alt="Seald Healthcare | Shield Icon"
             width={200}
             height={200}
             className="h-[180px] w-[180px] lg:h-[200px] lg:w-[200px] drop-shadow-[0_0_20px_rgba(22,119,255,0.4)]"

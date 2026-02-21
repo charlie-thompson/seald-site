@@ -139,7 +139,7 @@ export default function AboutPage() {
               <div key={person.name} className="flex flex-col items-center text-center">
                 <Image
                   src={person.image}
-                  alt={person.name}
+                  alt={`Seald Healthcare | ${person.name}`}
                   width={176}
                   height={176}
                   className="h-44 w-44 object-contain"
@@ -167,7 +167,7 @@ export default function AboutPage() {
               <div key={person.name} className="flex flex-col items-center text-center">
                 <Image
                   src={person.image}
-                  alt={person.name}
+                  alt={`Seald Healthcare | ${person.name}`}
                   width={176}
                   height={176}
                   className="h-44 w-44 object-contain"

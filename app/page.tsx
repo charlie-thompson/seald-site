@@ -30,37 +30,37 @@ const steps = [
 const screenshots = [
   {
     src: "/screens/dashboard.png",
-    alt: "Seald dashboard showing encryption and authorization overview",
+    alt: "Seald Healthcare | Encryption and Authorization Dashboard",
     caption: "Real-time encryption and authorization overview",
   },
   {
     src: "/screens/ai-policy-studio.png",
-    alt: "AI Policy Studio screen",
+    alt: "Seald Healthcare | AI Policy Studio",
     caption: "Write access policies in plain English",
   },
   {
     src: "/screens/logs-audit.png",
-    alt: "Audit logs screen",
+    alt: "Seald Healthcare | Audit Logs",
     caption: "Tamper-evident audit trail for every access event",
   },
   {
     src: "/screens/sessions.png",
-    alt: "Sessions and controls screen",
+    alt: "Seald Healthcare | Sessions and Controls",
     caption: "Session control and device posture",
   },
   {
     src: "/screens/admin-keys.png",
-    alt: "Admin and keys management screen",
+    alt: "Seald Healthcare | Admin and Keys Management",
     caption: "Key rotation, TTL, and revocation controls",
   },
   {
     src: "/screens/file-data-stats.png",
-    alt: "File and data statistics screen",
+    alt: "Seald Healthcare | File and Data Statistics",
     caption: "Visibility into encrypted assets and sharing patterns",
   },
   {
     src: "/screens/settings.png",
-    alt: "Settings screen",
+    alt: "Seald Healthcare | Settings",
     caption: "Organization and policy configuration",
   },
 ];
@@ -80,19 +80,16 @@ export default function HomePage() {
     <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-20">
       <div className="max-w-[720px] px-6 text-center md:px-0 md:text-left">
         <h1 className="leading-[1.15] tracking-[-0.02em]">
-          <span className="block text-3xl md:text-4xl lg:text-6xl font-extrabold text-[#0B1F3B] whitespace-nowrap">
-          Persistent Encryption
+          <span className="block text-4xl md:text-5xl lg:text-7xl font-extrabold whitespace-nowrap">
+            <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Control</span><span className="text-[#0B1F3B]"> That</span>
           </span>
-          <span className="block text-4xl md:text-5xl lg:text-7xl font-extrabold bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent whitespace-nowrap">
-          Total Control
+          <span className="block text-4xl md:text-5xl lg:text-7xl font-extrabold text-[#0B1F3B] whitespace-nowrap">
+            Follows the Data
           </span>
-          {/* <span className="block text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#0B1F3B] whitespace-nowrap"> */}
-             {/* Zero Workflow Disruption */}
-          {/* </span> */}
         </h1>
 
-        <p className="mt-6 max-w-[60ch] text-left text-xl leading-relaxed text-text-secondary md:mt-8 md:text-left md:text-1xl lg:text-2xl">
-          Seald Healthcare protects patient data even after it leaves your systems. Encryption and access policies follow the data across every recipient and workflow, giving your organization full visibility and control, with zero disruptions.
+        <p className="mt-6 max-w-[60ch] text-center text-xl leading-relaxed text-text-secondary md:mt-8 md:text-left md:text-1xl lg:text-2xl">
+          Seald Healthcare gives you full control over your patient data by encrypting PHI at the source. Set, enforce, and revoke access in real time, even after data is shared, without disrupting workflows.
         </p>
 
         <div className="mt-8 hidden flex-col gap-4 sm:flex-row md:mt-10 md:flex">
@@ -121,20 +118,23 @@ export default function HomePage() {
         <Container>
           <div className="text-center">
             <h2 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-              AI Policy Studio
+              Write Access Policies in Plain English with our AI Policy Studio
             </h2>
-            <p className="mx-auto mt-6 max-w-[700px] text-left text-base leading-relaxed text-white/70 md:text-lg">
-              Define access policies in plain English. Seald Healthcare&apos;s AI Policy Studio translates natural language into enforceable cryptographic policies, so administrators can write rules like &ldquo;Only allow clinical staff to decrypt patient records during office hours from managed devices&rdquo; instead of configuring complex rule engines. Reduce misconfiguration risk while dramatically simplifying policy management.
+            <p className="mx-auto mt-6 max-w-[700px] text-center text-base leading-relaxed text-white/70 md:text-left md:text-lg">
+              Define and enforce access policies in plain English. Seald Healthcare&apos;s AI Policy Studio translates natural language into cryptographically enforced rules that travel with the data, so administrators can write policies like &ldquo;Only allow clinical staff to decrypt patient records during office hours&rdquo; without configuring complex rule engines. Reduce misconfiguration risk while maintaining real-time, revocable control over PHI wherever it goes.
             </p>
           </div>
           <div className="mx-auto mt-12 max-w-[900px]">
             <div className="overflow-hidden rounded-xl border border-white/10 shadow-2xl shadow-black/40">
               <ScreenshotFrame
                 src="/screens/ai-policy-studio.png"
-                alt="AI Policy Studio — write access policies in plain English"
+                alt="Seald Healthcare | AI Policy Studio — Write Access Policies in Plain English"
                 caption="Write access policies in plain English"
               />
             </div>
+          </div>
+          <div className="mt-12 text-center">
+            <a href="/contact" className="btn-primary !px-8 !py-3 !text-lg">Book a Demo</a>
           </div>
         </Container>
       </section>
@@ -142,15 +142,15 @@ export default function HomePage() {
       {/* About Us Blurb */}
       <section className="relative overflow-hidden bg-[#050d1a] py-16 md:py-20">
         <Container className="max-w-3xl text-center">
-          <p className="mb-4 text-xl font-bold uppercase tracking-[0.15em] text-[#42ccf3]">
+          <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-white md:text-4xl">
             Our Mission
-          </p>
+          </h2>
           <p className="text-base leading-relaxed text-white/70 md:text-lg">
-            Seald Healthcare exists for one reason: to ensure that every piece of patient data is protected, not just where it is stored, but everywhere it travels. Our team brings together deep expertise in applied cryptography, healthcare compliance, and enterprise software to solve the industry&apos;s most fundamental security gap. We believe that protecting patient data should never come at the cost of clinical efficiency.
+            Seald Healthcare&apos;s mission is to ensure that every piece of patient data is protected and under the organization&apos;s control, not just where it is stored, but wherever it travels. We combine deep expertise in applied cryptography, healthcare compliance, and enterprise software to close the industry&apos;s most fundamental security gap. Protecting patient data should never come at the cost of clinical efficiency.
           </p>
           <div className="mt-8">
             <a href="/about" className="inline-flex items-center justify-center rounded-lg bg-[#007ff2] px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-[#0066cc] hover:-translate-y-[1px] shadow-lg shadow-blue-500/20">
-              Learn More About Us
+              Learn More
             </a>
           </div>
         </Container>
