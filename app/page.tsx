@@ -77,18 +77,15 @@ export default function HomePage() {
   {/* <div className="absolute bottom-0 left-20 h-[300px] w-[300px] rounded-full bg-[#0B5CFF]/10 blur-[100px] pointer-events-none" /> */}
 
   <Container className="relative z-10">
-    <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-20">
-      <div className="max-w-[720px] px-6 text-center md:px-0 md:text-left">
-        <h1 className="leading-[1.15] tracking-[-0.02em]">
-          <span className="block text-4xl md:text-5xl lg:text-7xl font-extrabold whitespace-nowrap">
-            <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Control</span><span className="text-[#0B1F3B]"> That</span>
-          </span>
-          <span className="block text-4xl md:text-5xl lg:text-7xl font-extrabold text-[#0B1F3B] whitespace-nowrap">
-            Follows the Data
-          </span>
+    <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-12">
+      <div className="md:flex-[3] md:min-w-0 px-6 text-center md:px-0 md:text-left">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-[-0.02em]">
+          <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Control</span>{" "}<span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Your</span><br />
+          <span className="text-[#0B1F3B]">Patient </span><span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Data</span><span className="text-[#0B1F3B]"> Wherever</span><br />
+          <span className="text-[#0B1F3B]">it Goes</span>
         </h1>
 
-        <p className="mt-6 max-w-[60ch] text-center text-xl leading-relaxed text-text-secondary md:mt-8 md:text-left md:text-1xl lg:text-2xl">
+        <p className="mt-6 max-w-xl text-center text-xl leading-relaxed text-text-secondary md:mt-8 md:text-left md:text-1xl lg:text-2xl">
           Seald Healthcare gives you full control over your patient data by encrypting PHI at the source. Set, enforce, and revoke access in real time, even after data is shared, without disrupting workflows.
         </p>
 
@@ -97,7 +94,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="my-6 flex h-[620px] w-full items-center justify-center overflow-hidden px-0 md:my-0 md:h-auto md:w-[540px] md:max-w-[45vw] md:shrink-0 md:grow-0">
+      <div className="my-6 flex h-[620px] w-full items-center justify-center overflow-hidden px-0 md:my-0 md:h-auto md:flex-[2] md:min-w-0">
         <SealdEncryptionHero />
       </div>
 
@@ -111,17 +108,23 @@ export default function HomePage() {
 
 
 
+      {/* Core Capabilities */}
+      <SecureDataLayer />
+
+      {/* White Paper CTA */}
+      <WhitePaperCTA />
+
       {/* AI Policy Studio */}
       <section className="relative overflow-hidden bg-[#050d1a] py-20 md:py-28">
         <div className="glow-shape glow-blue right-[5%] top-0 h-[24rem] w-[24rem]" />
         <div className="glow-shape glow-cyan left-[10%] bottom-0 h-[20rem] w-[20rem]" />
         <Container>
           <div className="text-center">
-            <h2 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
+            <h2 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl">
               Write Access Policies in Plain English with our AI Policy Studio
             </h2>
             <p className="mx-auto mt-6 max-w-[700px] text-center text-base leading-relaxed text-white/70 md:text-left md:text-lg">
-              Define and enforce access policies in plain English. Seald Healthcare&apos;s AI Policy Studio translates natural language into cryptographically enforced rules that travel with the data, so administrators can write policies like &ldquo;Only allow clinical staff to decrypt patient records during office hours&rdquo; without configuring complex rule engines. Reduce misconfiguration risk while maintaining real-time, revocable control over PHI wherever it goes.
+              Define and enforce access policies in plain English. Seald Healthcare&apos;s AI Policy Studio translates natural language into cryptographically enforced rules that travel with the data, so administrators can write policies like &ldquo;Only allow clinical staff to decrypt patient records during office hours&rdquo; without configuring complex rule engines.
             </p>
           </div>
           <div className="mx-auto mt-12 max-w-[900px]">
@@ -155,12 +158,6 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
-
-      {/* White Paper CTA */}
-      <WhitePaperCTA />
-
-      {/* Core Capabilities */}
-      <SecureDataLayer />
 
       {/* Product proof / screenshots */}
       <section className="relative overflow-hidden py-16 md:py-20">

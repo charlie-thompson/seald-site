@@ -267,7 +267,7 @@ export default function SecureDataLayer() {
               letterSpacing: "0.005em",
             }}
           >
-            Everything you need to encrypt PHI at the source, enforce access policies in real time, and maintain a complete chain of custody. Seald Healthcare secures data at the layer that matters most, giving organizations full control over who can access patient data, how, and under what conditions — even after it leaves your systems. If a vendor is breached or a contract ends, your data remains secure and unreadable.
+            Everything you need to encrypt PHI at the source and enforce access policies in real time. Seald Healthcare secures patient data at the record level, letting organizations decide who can access patient data, how, and under what conditions — even after it leaves your systems. If a vendor is breached or a contract ends, your data stays secure and unreadable.
           </p>
         </div>
 

@@ -355,7 +355,7 @@ export default function Article42BreachesPage() {
             About Seald Healthcare
           </h2>
           <p className="text-base md:text-lg leading-relaxed text-white/70">
-            Seald Healthcare secures PHI at the data layer. Our SDKs and APIs encrypt data at the record level with persistent access policies and an AI policy engine that lets teams write governance rules in plain English. Every access event is logged in tamper-evident audit trails. No intermediary, including Seald Healthcare, can access plaintext data. Works with EHRs, patient portals, telehealth, messaging, file sharing, and custom applications. Complements AWS, Google Cloud, and Azure environments.
+            Seald Healthcare gives healthcare organizations full control over their patient data by encrypting PHI at the source. Set, enforce, and revoke access in real time, even after data is shared, without disrupting workflows.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
             <a
