@@ -80,9 +80,9 @@ export default function HomePage() {
     <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-12">
       <div className="md:flex-[3] md:min-w-0 px-6 text-center md:px-0 md:text-left">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-[-0.02em]">
-          <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Control</span>{" "}<span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Your</span><br />
-          <span className="text-[#0B1F3B]">Patient </span><span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Data</span><span className="text-[#0B1F3B]"> Wherever</span><br />
-          <span className="text-[#0B1F3B]">it Goes</span>
+          <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Control</span><span className="text-[#0B1F3B]"> Your</span><br />
+          <span className="text-[#0B1F3B]">Patient </span><span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Data</span><br />
+          <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Wherever</span><span className="text-[#0B1F3B]"> it Goes</span>
         </h1>
 
         <p className="mt-6 max-w-xl text-center text-xl leading-relaxed text-text-secondary md:mt-8 md:text-left md:text-1xl lg:text-2xl">
