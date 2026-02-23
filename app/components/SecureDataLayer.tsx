@@ -244,8 +244,7 @@ export default function SecureDataLayer() {
               lineHeight: 1.15,
             }}
           >
-            The Secure Data Layer{" "}
-            <br className="md:hidden" />
+            The{" "}
             <span
               style={{
                 background: "linear-gradient(135deg, #22D3EE, #1677FF)",
@@ -253,7 +252,19 @@ export default function SecureDataLayer() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              for Healthcare
+              Secure
+            </span>{" "}
+            Data Layer{" "}
+            <br className="md:hidden" />
+            for{" "}
+            <span
+              style={{
+                background: "linear-gradient(135deg, #22D3EE, #1677FF)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Healthcare
             </span>
           </h2>
 

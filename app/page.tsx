@@ -79,7 +79,7 @@ export default function HomePage() {
   <Container className="relative z-10">
     <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-12">
       <div className="md:flex-[3] md:min-w-0 px-6 text-center md:px-0 md:text-left">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-[-0.02em]">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-[-0.02em]">
           <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Control</span><span className="text-[#0B1F3B]"> Your</span><br />
           <span className="text-[#0B1F3B]">Patient </span><span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Data</span><br />
           <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Wherever</span><span className="text-[#0B1F3B]"> it Goes</span>
@@ -120,8 +120,9 @@ export default function HomePage() {
         <div className="glow-shape glow-cyan left-[10%] bottom-0 h-[20rem] w-[20rem]" />
         <Container>
           <div className="text-center">
-            <h2 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl">
-              Write Access Policies in Plain English with our AI Policy Studio
+            <h2 className="text-[28px] font-extrabold tracking-tight text-white md:text-5xl">
+              Write Access Policies in Plain English<br />
+              with our <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">AI Policy Studio</span>
             </h2>
             <p className="mx-auto mt-6 max-w-[700px] text-center text-base leading-relaxed text-white/70 md:text-left md:text-lg">
               Define and enforce access policies in plain English. Seald Healthcare&apos;s AI Policy Studio translates natural language into cryptographically enforced rules that travel with the data, so administrators can write policies like &ldquo;Only allow clinical staff to decrypt patient records during office hours&rdquo; without configuring complex rule engines.
@@ -132,7 +133,6 @@ export default function HomePage() {
               <ScreenshotFrame
                 src="/screens/ai-policy-studio.png"
                 alt="Seald Healthcare | AI Policy Studio — Write Access Policies in Plain English"
-                caption="Write access policies in plain English"
               />
             </div>
           </div>
