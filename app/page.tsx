@@ -85,7 +85,7 @@ export default function HomePage() {
           <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Wherever</span><span className="text-[#0B1F3B]"> it Goes</span>
         </h1>
 
-        <p className="mt-6 max-w-xl text-center text-xl leading-relaxed text-text-secondary md:mt-8 md:text-left md:text-1xl lg:text-2xl">
+        <p className="mt-5 max-w-lg text-center text-base leading-relaxed text-text-muted md:mt-6 md:text-left md:text-lg">
           Seald Healthcare gives you full control over your patient data by encrypting PHI at the source. Set, enforce, and revoke access in real time, even after data is shared, without disrupting workflows.
         </p>
 

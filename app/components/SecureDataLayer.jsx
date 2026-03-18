@@ -243,7 +243,7 @@ export default function SecureDataLayer() {
               lineHeight: 1.15,
             }}
           >
-            The Secure Data Layer{" "}
+            The Encrypted Data Layer{" "}
             <span
               style={{
                 background: "linear-gradient(135deg, #22D3EE, #1677FF)",
