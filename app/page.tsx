@@ -80,8 +80,8 @@ export default function HomePage() {
     <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-12">
       <div className="md:flex-[3] md:min-w-0 px-6 text-center md:px-0 md:text-left">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-[-0.02em]">
-          <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Control</span><span className="text-[#0B1F3B]"> Your</span><br />
-          <span className="text-[#0B1F3B]">Patient </span><span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Data</span><br />
+          <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Secure</span><span className="text-[#0B1F3B]"> and </span><span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Control</span><br />
+          <span className="text-[#0B1F3B]">Your Patient </span><span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Data</span><br />
           <span className="bg-gradient-to-r from-[#22D3EE] to-[#1677FF] bg-clip-text text-transparent">Wherever</span><span className="text-[#0B1F3B]"> it Goes</span>
         </h1>
 
@@ -138,23 +138,6 @@ export default function HomePage() {
           </div>
           <div className="mt-12 text-center">
             <a href="/contact" className="btn-primary !px-8 !py-3 !text-lg">Book a Demo</a>
-          </div>
-        </Container>
-      </section>
-
-      {/* About Us Blurb */}
-      <section className="relative overflow-hidden bg-[#050d1a] py-16 md:py-20">
-        <Container className="max-w-3xl text-center">
-          <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-white md:text-4xl">
-            Our Mission
-          </h2>
-          <p className="text-base leading-relaxed text-white/70 md:text-lg">
-            Seald Healthcare&apos;s mission is to ensure that every piece of patient data is protected and under the organization&apos;s control, not just where it is stored, but wherever it travels. We combine deep expertise in applied cryptography, healthcare compliance, and enterprise software to close the industry&apos;s most fundamental security gap. Protecting patient data should never come at the cost of clinical efficiency.
-          </p>
-          <div className="mt-8">
-            <a href="/about" className="inline-flex items-center justify-center rounded-lg bg-[#007ff2] px-8 py-3 font-semibold text-white transition-all duration-200 hover:bg-[#0066cc] hover:-translate-y-[1px] shadow-lg shadow-blue-500/20">
-              Learn More
-            </a>
           </div>
         </Container>
       </section>
