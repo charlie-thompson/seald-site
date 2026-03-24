@@ -252,7 +252,7 @@ export default function SecureDataLayer() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Secure
+              Encrypted
             </span>{" "}
             Data Layer{" "}
             <br className="md:hidden" />

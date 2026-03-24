@@ -30,9 +30,9 @@ export const solutions: SolutionEntry[] = [
   {
     slug: 'small-specialty-providers',
     label: 'Small and Specialty Providers',
-    tagline: 'Right-sized data security for specialty practices.',
+    tagline: 'Patient data is a high-value target regardless of practice size.',
     description:
-      'Small and specialty providers often lack the security infrastructure of large health systems but face the same regulatory requirements and breach risks. Seald Healthcare delivers enterprise-grade encryption and access control through a lightweight SDK integration — no security team required.',
+      'Small and specialty practices hold the same highly sensitive patient data that attackers actively target — and their size does not reduce the risk. Cyber attackers do not scale their efforts to your headcount. Seald Healthcare gives smaller organizations record-level encryption and persistent access control through a lightweight SDK integration, so your patients are protected at the same standard as any large health system.',
   },
   {
     slug: 'telehealth',

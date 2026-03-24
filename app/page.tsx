@@ -5,6 +5,7 @@ import SectionHeading from "@/app/components/SectionHeading";
 import GlassCard from "@/app/components/GlassCard";
 import ScreenshotFrame from "@/app/components/ScreenshotFrame";
 import WhitePaperCTA from "@/app/components/WhitePaperCTA";
+import AgenticAISection from "@/app/components/AgenticAISection";
 
 const steps = [
   {
@@ -199,6 +200,9 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      {/* Agentic AI Security */}
+      <AgenticAISection />
 
       {/* Final CTA */}
       <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">

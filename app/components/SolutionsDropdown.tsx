@@ -130,27 +130,17 @@ export default function SolutionsDropdown() {
                 {solutions.map(({ slug, label, tagline }) => {
                   const Icon = ICON_MAP[slug] ?? Building2;
                   return (
-                    <Link
+                    <div
                       key={slug}
-                      href={`/solutions/${slug}`}
                       role="menuitem"
-                      onClick={() => setIsOpen(false)}
-                      className="group/item"
                       style={{
                         display: 'flex',
                         alignItems: 'flex-start',
                         gap: 11,
                         padding: '10px 12px',
                         borderRadius: 10,
-                        textDecoration: 'none',
-                        transition: 'background 0.14s ease',
+                        cursor: 'default',
                       }}
-                      onMouseEnter={(e) =>
-                        (e.currentTarget.style.background = '#F6FAFF')
-                      }
-                      onMouseLeave={(e) =>
-                        (e.currentTarget.style.background = 'transparent')
-                      }
                     >
                       {/* Icon box */}
                       <div
@@ -192,7 +182,7 @@ export default function SolutionsDropdown() {
                           {tagline}
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   );
                 })}
               </div>
