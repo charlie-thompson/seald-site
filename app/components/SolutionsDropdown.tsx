@@ -222,8 +222,8 @@ export default function SolutionsDropdown() {
                 Why Seald Healthcare
               </p>
 
-              {/* Security Comparison featured link */}
-              <Link
+              {/* Security Comparison featured link — hidden, restore when ready */}
+              {/* <Link
                 href="/security-comparison"
                 role="menuitem"
                 onClick={() => setIsOpen(false)}
@@ -281,8 +281,7 @@ export default function SolutionsDropdown() {
                 </div>
               </Link>
 
-              {/* Divider */}
-              <div style={{ height: 1, background: 'rgba(11,31,59,0.07)', margin: '4px 0' }} />
+              <div style={{ height: 1, background: 'rgba(11,31,59,0.07)', margin: '4px 0' }} /> */}
 
               {/* More coming teaser */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>

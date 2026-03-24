@@ -201,8 +201,8 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Agentic AI Security */}
-      <AgenticAISection />
+      {/* Agentic AI Security — hidden, restore when ready */}
+      {/* <AgenticAISection /> */}
 
       {/* Final CTA */}
       <section className="relative overflow-hidden bg-[#F6FAFF] py-16 md:py-20">
