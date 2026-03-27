@@ -53,7 +53,7 @@ const advisors = [
   {
     name: "Dr. John Olsen",
     role: "Advisor",
-    image: "/team/dr-john-olsen-advisor.png",
+    image: "/team/john-olsen.png",
     bio: [
       "Co-founder of EncompassRx, $400M+ ARR, acquired by CVS Health in 2018",
       "Serial entrepreneur with multiple exits",
