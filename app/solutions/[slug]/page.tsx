@@ -3,6 +3,11 @@ import { notFound } from 'next/navigation';
 import { solutions, solutionsBySlug } from '@/app/solutions/solutionsData';
 import { solutionsFullContent } from '@/app/solutions/solutionsFullContent';
 import SolutionPageShell from '@/app/components/SolutionPageShell';
+import HospitalHeroAnimation from '@/app/components/HospitalHeroAnimation';
+
+const HERO_ANIMATIONS: Record<string, React.ReactNode> = {
+  'hospitals-health-systems': <HospitalHeroAnimation />,
+};
 
 // ── Static params ──────────────────────────────────────────────────────────
 export function generateStaticParams() {
@@ -42,6 +47,7 @@ export default async function SolutionPage({
       content={content}
       solutions={solutions}
       currentSlug={slug}
+      heroAnimation={HERO_ANIMATIONS[slug]}
     />
   );
 }

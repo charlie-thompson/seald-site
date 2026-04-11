@@ -8,6 +8,17 @@ export interface ProblemPoint {
   text: string;
 }
 
+export interface ProblemCard {
+  title: string;
+  description: string;
+}
+
+export interface StatBlock {
+  value: string;
+  label: string;
+  subtext: string;
+}
+
 export interface SolutionFullContent {
   slug: string;
   heroBadge: string;
@@ -19,10 +30,12 @@ export interface SolutionFullContent {
   problemHeadline: string;
   problemIntro: string;
   problemPoints: ProblemPoint[];
+  problemCards?: ProblemCard[];
   capabilitiesBadge: string;
   capabilitiesHeadline: string;
   capabilitiesSubtitle: string;
   capabilities: Capability[];
+  stat?: StatBlock;
   ctaTagline: string;
   ctaHeadline: string;
   ctaBody: string;
@@ -31,54 +44,64 @@ export interface SolutionFullContent {
 export const solutionsFullContent: Record<string, SolutionFullContent> = {
   'hospitals-health-systems': {
     slug: 'hospitals-health-systems',
-    heroBadge: 'Hospitals and Health Systems',
-    heroHeadlineStart: 'PHI Encryption Across',
-    heroHeadlineAccent: 'Every Facility,',
-    heroHeadlineEnd: 'Every Vendor, Every Workflow',
+    heroBadge: 'Hospitals & Health Systems',
+    heroHeadlineStart: 'Encrypt PHI Across',
+    heroHeadlineAccent: 'Every System, Vendor,',
+    heroHeadlineEnd: 'and Workflow',
     heroSubtitle:
-      'Large health systems and integrated delivery networks handle massive volumes of PHI across dozens of facilities and hundreds of vendor relationships. Seald Healthcare delivers record-level encryption and persistent access controls that protect patient data across the full continuum of care.',
+      'Health systems share patient data with dozens of vendors, platforms, and partners daily. Seald Healthcare encrypts that data at the record level so it stays protected and revocable no matter where it travels.',
     problemBadge: 'The Problem',
-    problemHeadline: 'Perimeter security was not built for enterprise healthcare complexity',
-    problemIntro:
-      'Modern health systems are not bounded networks. PHI moves continuously across campuses, cloud platforms, EHR systems, and third-party partners. Firewalls and role-based access controls protect the perimeter, but not the data itself.',
-    problemPoints: [
-      { text: 'A single vendor breach exposes PHI held by every partner in your network.' },
-      { text: 'Access controls live in the system, not in the data, so a compromised credential means full exposure.' },
-      { text: 'Audit logs often capture what happened after a breach, not in time to prevent it.' },
-      { text: 'Compliance audits require demonstrating control over data you may have already shared with dozens of downstream partners.' },
+    problemHeadline: '',
+    problemIntro: '',
+    problemPoints: [],
+    problemCards: [
+      {
+        title: 'Vendors Hold Your Data Hostage',
+        description:
+          'You sign BAAs, but your PHI still sits in plaintext on vendor servers. If they are breached, you make the headline.',
+      },
+      {
+        title: 'Compliance Does Not Equal Security',
+        description:
+          'Passing a HIPAA audit does not mean your data is protected. Compliance checks a box. Encryption closes the gap.',
+      },
+      {
+        title: 'No Visibility After Data Leaves',
+        description:
+          'Once PHI is shared with a billing company, analytics vendor, or clearinghouse, you lose control. You cannot revoke what you cannot see.',
+      },
     ],
     capabilitiesBadge: 'How Seald Healthcare Solves It',
-    capabilitiesHeadline: 'Enterprise-grade encryption without the enterprise complexity',
+    capabilitiesHeadline: 'Protection that travels with the data',
     capabilitiesSubtitle:
-      'Seald Healthcare encrypts PHI at the record level so protection travels with the data, not the network.',
+      'Seald Healthcare encrypts PHI at the record level so protection stays with the data, not the network.',
     capabilities: [
       {
         iconName: 'Shield',
-        title: 'Record-Level Encryption at Scale',
+        title: 'Record-Level Encryption',
         description:
-          'PHI is encrypted on the originating system before it is transmitted or stored. Even if your infrastructure is compromised, patient records remain unreadable without explicit authorization.',
+          'Every piece of PHI is encrypted individually before it leaves your system. Not volume-level. Not database-level. Each record, each field. Works with your existing EHR, portals, and vendor connections with no rip and replace.',
       },
       {
-        iconName: 'Users',
-        title: 'Group and Role-Based Access Across IDNs',
+        iconName: 'Lock',
+        title: 'Persistent Access Policies',
         description:
-          'Assign access to care teams, departments, and facilities. Permissions update automatically as staff change roles or locations, with no manual key management required.',
-      },
-      {
-        iconName: 'RefreshCw',
-        title: 'Real-Time Policy Enforcement',
-        description:
-          'Access policies are enforced at decryption, not at the network perimeter. Revoke a vendor relationship or a terminated employee instantly, even for data already shared.',
+          "Policies travel with the data. Revoke a vendor's access after contract termination and their copy becomes unreadable instantly. Update permissions in real time without touching the recipient's systems.",
       },
       {
         iconName: 'BarChart2',
-        title: 'Tamper-Evident Audit Trail',
+        title: 'Real-Time Audit Trail',
         description:
-          'Every access, denial, and policy change is logged with cryptographic integrity. Produce a complete chain of custody for any patient record during a compliance audit or breach investigation.',
+          'See exactly who accessed what, when, and from where. Tamper-evident logs you can hand directly to auditors. Every access, denial, and policy change is recorded with cryptographic integrity.',
       },
     ],
-    ctaTagline: 'Ready to protect your health system?',
-    ctaHeadline: 'Encrypt PHI at the source. Control it everywhere it goes.',
+    stat: {
+      value: '846M+',
+      label: 'Since 2009, over 846 million patient records have been exposed in healthcare breaches.',
+      subtext: 'The average healthcare breach costs $9.77 million. Most of that data was stored in plaintext.',
+    },
+    ctaTagline: 'Take the next step',
+    ctaHeadline: 'Ready to Protect Your Patient Data Beyond the Perimeter?',
     ctaBody:
       'See how Seald Healthcare fits into your existing EHR, cloud, and vendor ecosystem without disrupting clinical workflows.',
   },

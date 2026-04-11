@@ -3,16 +3,14 @@
 import { useRef, useState } from 'react';
 import Link from 'next/link';
 import {
-  ArrowRight,
+  // ArrowRight, GitCompare, Sparkles — re-enable with "Why Seald Healthcare" column
   Bot,
   Building2,
   ChevronDown,
   FileText,
-  GitCompare,
   GraduationCap,
   Pill,
   ShieldAlert,
-  Sparkles,
   Stethoscope,
   Video,
 } from 'lucide-react';
@@ -130,16 +128,25 @@ export default function SolutionsDropdown() {
                 {solutions.map(({ slug, label, tagline }) => {
                   const Icon = ICON_MAP[slug] ?? Building2;
                   return (
-                    <div
+                    <Link
                       key={slug}
+                      href={`/solutions/${slug}`}
                       role="menuitem"
+                      onClick={() => setIsOpen(false)}
                       style={{
                         display: 'flex',
                         alignItems: 'flex-start',
                         gap: 11,
                         padding: '10px 12px',
                         borderRadius: 10,
-                        cursor: 'default',
+                        textDecoration: 'none',
+                        transition: 'background 0.14s ease',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = 'rgba(22,119,255,0.06)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = 'transparent';
                       }}
                     >
                       {/* Icon box */}
@@ -182,13 +189,14 @@ export default function SolutionsDropdown() {
                           {tagline}
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>
             </div>
 
-            {/* ── Vertical divider ── */}
+            {/* ── "Why Seald Healthcare" column — hidden until content is ready ── */}
+            {/*
             <div
               style={{
                 width: 1,
@@ -198,7 +206,6 @@ export default function SolutionsDropdown() {
               }}
             />
 
-            {/* ── Column 2: Featured + CTA ── */}
             <div
               style={{
                 paddingLeft: 40,
@@ -208,7 +215,6 @@ export default function SolutionsDropdown() {
                 gap: 12,
               }}
             >
-              {/* Section label */}
               <p
                 style={{
                   fontSize: 10.5,
@@ -222,8 +228,7 @@ export default function SolutionsDropdown() {
                 Why Seald Healthcare
               </p>
 
-              {/* Security Comparison featured link — hidden, restore when ready */}
-              {/* <Link
+              <Link
                 href="/security-comparison"
                 role="menuitem"
                 onClick={() => setIsOpen(false)}
@@ -281,31 +286,8 @@ export default function SolutionsDropdown() {
                 </div>
               </Link>
 
-              <div style={{ height: 1, background: 'rgba(11,31,59,0.07)', margin: '4px 0' }} /> */}
+              <div style={{ height: 1, background: 'rgba(11,31,59,0.07)', margin: '4px 0' }} />
 
-              {/* More coming teaser */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <div
-                  style={{
-                    width: 30,
-                    height: 30,
-                    borderRadius: 8,
-                    background: 'linear-gradient(135deg, rgba(22,119,255,0.07), rgba(34,211,238,0.07))',
-                    border: '1px solid rgba(22,119,255,0.1)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                  }}
-                >
-                  <Sparkles size={13} color="#1677FF" />
-                </div>
-                <p style={{ fontSize: 12, color: '#6B83A0', lineHeight: 1.5 }}>
-                  More resources coming soon
-                </p>
-              </div>
-
-              {/* Talk to us CTA */}
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
@@ -338,6 +320,7 @@ export default function SolutionsDropdown() {
                 <ArrowRight size={13} />
               </Link>
             </div>
+            */}
           </div>
         </div>
       </div>
